@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <!--  <ScrollView 
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"> -->
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="top"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/card_layout"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_form_previous"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/orange_button"
+            android:text="PREVIOUS"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_form_next"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/blue_button"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+    <com.globalnest.classes.NonSwipeableViewPager
+        android:id="@+id/list_forms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        >
+    </com.globalnest.classes.NonSwipeableViewPager>
+
+
+    <com.globalnest.classes.MultiDirectionSlidingDrawer
+        xmlns:my="http://schemas.android.com/apk/res/com.globalnest.scanattendee"
+        android:id="@+id/forms_drawer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        my:content="@+id/content"
+        my:direction="bottomToTop"
+        my:handle="@+id/handle1" >
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/darl_gray_text_color" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Copy Form Info"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </FrameLayout>
+
+            <ListView
+                android:id="@+id/list_form_names"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ListView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/handle1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/drawerhandle" />
+    </com.globalnest.classes.MultiDirectionSlidingDrawer>
+
+
+
+
+</FrameLayout>

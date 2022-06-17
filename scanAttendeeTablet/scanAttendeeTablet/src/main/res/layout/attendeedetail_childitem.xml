@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:weightSum="3"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txt_label"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Prefix"
+            android:layout_weight="2"
+            android:textColor="@color/darl_gray_text_color"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textColor="@color/darl_gray_text_color"
+            android:text=":"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint=""
+            android:textColor="@color/black"
+            android:visibility="gone"
+            />
+        <Spinner
+            android:id="@+id/spn_name"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:visibility="gone"
+            />
+        <EditText
+            android:id="@+id/edt_longtext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="sai"
+            android:visibility="gone"
+            />
+        <EditText
+            android:id="@+id/edt_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:digits="0123456789 ()-"
+            android:maxLength="15"
+            android:visibility="gone"
+            />
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:hint="Email Id"
+            android:background="@color/transparent"
+            android:inputType="textEmailAddress|textNoSuggestions|textFilter"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+</LinearLayout>

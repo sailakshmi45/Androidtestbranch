@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_add_bluetoothaddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="For Pairing we need bluetooth Address of the device to generate QRcode or Barcode!"
+                    android:textColor="@color/orange_bg"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/statusscreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_icon_colorbutton"
+                    android:text=" Display Bluetooth Address"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/edt_BTaddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:hint="Please Enter Bluetooth Address and Save"
+                    android:maxLength="17"
+                    android:text=""
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/lay_imgeditBTAddress"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/image_tint_color"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center|right"
+                        android:padding="2dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/edit_pencil" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"></View>
+
+                <TextView
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center|right"
+                    android:drawableRight="@drawable/save"
+                    android:gravity="right" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"></View>
+
+                <ImageView
+                    android:id="@+id/img_delete"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/delete" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:id="@+id/layout_show_scancode">
+
+                <TextView
+                    android:id="@+id/txt_pairheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:text="To pair the CHS with Android device"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_normal" />
+                <LinearLayout
+                    android:id="@+id/lay_barcode"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:background="#000"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/socket1dcodeimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:text="1D Scanner Barcode"
+                    android:textColor="@color/orange_bg"
+                    android:textSize="@dimen/font_normal" />
+
+                <ImageView
+                    android:id="@+id/socketbarcodeimg"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="0dp"
+                    android:text="2D Scanner QR Code"
+                    android:textColor="@color/orange_bg"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/stepmsg1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:text="1. Power on the CHS and hold the scanner about 4 inches (10cm) from the screen."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/stepmsg2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:text="2. Scan the barcode to start a connection."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/stepmsg3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:text="3. Reply &apos;0000&apos; to the PIN prompt if necessary."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/stepmsg4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:text="4. Wait a few seconds for the connection."
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/stepmsg5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="5. Close this window when finished."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

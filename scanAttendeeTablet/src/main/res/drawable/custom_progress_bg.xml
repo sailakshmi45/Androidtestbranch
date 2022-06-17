@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    Progress background
+    <item android:id="@android:id/background">
+        <shape
+            android:shape="ring"
+            android:useLevel="false">
+            <solid
+                android:color="#dae1e6"/>
+        </shape>
+    </item>
+
+    Progress
+    <item android:id="@android:id/progress">
+        Rotation of the progress to start at the top
+        <rotate
+            android:fromDegrees="-90"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="-90">
+            <shape
+                android:shape="ring"
+                android:useLevel="true">
+                <solid
+                    android:color="#116162"/>
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list> -->
+ <!-- <rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="90"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="360">
+ 
+    <shape
+        android:innerRadiusRatio="3"
+        android:shape="ring"
+        android:thicknessRatio="7.0">
+        <gradient
+            android:centerColor="#007DD6"
+            android:endColor="#007DD6"
+            android:startColor="@android:color/transparent"
+            android:angle="0"
+            android:type="sweep"
+            android:useLevel="false" />
+    </shape>
+ 
+</rotate>  -->
+ <rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="360" >
+
+    <shape
+        android:innerRadiusRatio="5"
+        android:shape="oval"
+        android:thicknessRatio="40"
+        android:useLevel="false" >
+        <size
+            android:height="76dip"
+            android:width="76dip"/>
+
+        <gradient
+            android:angle="0"
+            android:endColor="@color/green_flat_color"
+            android:startColor="@android:color/transparent"
+            android:type="sweep"
+            android:useLevel="false" />
+    </shape>
+
+</rotate> 

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+
+    <RelativeLayout
+        android:id="@+id/front"
+        style="@style/MyListFrontContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="front"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/line_effect"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="0dp" >
+
+                <FrameLayout
+                    android:id="@+id/date_layout"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="1dp"
+                    >
+                    <FrameLayout
+                        android:id="@+id/statusbar"
+                        android:layout_width="4dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/txt_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="#D8D8D8"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:maxLines="2"
+                        android:text="AA"
+                        android:visibility="gone"
+                        android:textColor="@color/blue_text_color"
+                        android:textSize="@dimen/font_tablet_big" >
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/attendee_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/image_border"
+                        android:scaleType="fitXY"
+                        android:visibility="gone"
+                        android:adjustViewBounds="false" />
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/attendeelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/date_layout"
+                    android:layout_toEndOf="@+id/date_layout">
+
+                    <TextView
+                        android:id="@+id/txtattname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:gravity="left"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:id="@+id/txtattcomp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="left"
+                        android:maxLines="2"
+                        android:text="Google Inc."
+                        android:textColor="@color/gray_color"
+                        android:textSize="@dimen/font_small" />
+
+                    <TextView
+                        android:id="@+id/txtseatnum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="Seat No:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txt_badgeheading"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Badge Status: "
+                            android:textColor="@color/black"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/font_small" />
+                        <TextView
+                            android:id="@+id/txtbadgeprintstatus"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@color/orange_bg"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <com.globalnest.autoresizetextview.AutoResizeTextView
+                        android:id="@+id/txttickettype"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:maxLines="2"
+                        android:padding="2dp"
+                        android:layout_marginTop="3dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

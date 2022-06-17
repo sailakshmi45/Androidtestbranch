@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@drawable/card_layout">
+        <LinearLayout
+            android:id="@+id/layout_amount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/PayStatus_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                android:text="Paid Amount"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_paid_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:text="123"
+                android:layout_weight="0.4"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/light_blue"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_payment_status"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                android:text="Payment Status"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <com.globalnest.autoresizetextview.AutoResizeTextView
+                android:id="@+id/txt_payment_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.4"
+                android:gravity="right"
+                android:text="Paid"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/green_connected"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                android:text="Payment Mode "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_payment_mode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.4"
+                android:gravity="right"
+                android:text="CASH"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/light_blue"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                android:text="Payment Type "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_payment_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.4"
+                android:gravity="right"
+                android:text="Deposit"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/light_blue"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                android:text="Payment Date"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_payment_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.4"
+                android:gravity="right"
+                android:text="Apr 09,2018"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/light_blue"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_creditcarddetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:id="@+id/layout_paygateway"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:text="Pay Gateway "
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_paygateway_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:text="PayPal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_blue"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_card_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:text="Card Number "
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_card_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:text="XXXX XXXX XXXX 5407"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_blue"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_card_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="1"  >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:text="Credit Card Type "
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_card_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:inputType="textCapCharacters"
+                    android:text="Visa"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_blue"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="1"  >
+
+                <TextView
+                    android:id="@+id/txt_OD_checkno"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="Transaction ID "
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <com.globalnest.autoresizetextview.AutoResizeTextView
+                    android:id="@+id/txt_payment_trans_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:singleLine="true"
+                    android:gravity="right"
+                    android:maxLines="3"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/blue_text_color" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_pay_regtype"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"  >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                android:text="Pay Reg Type "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_pay_reg_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.4"
+                android:gravity="right"
+                android:text="Pay Reg Type"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/light_blue"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_checkno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.8"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="Check No"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txt_payment_checkno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:maxLines="3"
+                android:text="check-123"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/blue_text_color" />
+            <LinearLayout
+                android:id="@+id/layout_editcheckno"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:padding="1dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/image_tint_color"
+                android:visibility="visible"
+                >
+                <ImageView
+                    android:id="@+id/img_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/edit_pencil"
+                    android:layout_gravity="center|right"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/edt_payment_note"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/intractive_edit_text"
+                android:gravity="top|left"
+                android:hint="Note"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:maxLength="256"
+                android:maxLines="6"
+                android:minLines="2"
+                android:padding="4dp"
+                android:drawableRight="@drawable/edit_pencil"
+                android:layout_weight="0.1"
+                />
+            <Button
+                android:layout_weight="0.9"
+                android:id="@+id/btn_save_notes"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/save"
+                android:visibility="visible"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

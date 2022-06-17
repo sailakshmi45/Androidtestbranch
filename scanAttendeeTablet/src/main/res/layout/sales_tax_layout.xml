@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_salestax"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="@string/salestaxvalue"
+            android:textSize="@dimen/font_header" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/img_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/txt_sel_value"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="35dp"
+                android:gravity="center_vertical"
+                android:text="@string/st_val_is"
+                android:textSize="@dimen/font_title" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/header_stroke" />
+
+        <Switch
+            android:id="@+id/switch_tickets"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="Is Applicable"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="35dp"
+            android:visibility="gone"
+            android:background="@color/header_stroke" />
+
+        <Switch
+            android:id="@+id/switch_items"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="@string/tax_item"
+             android:visibility="gone"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+             android:visibility="gone"
+            android:background="@color/header_stroke" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtnote"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:gravity="center"
+        android:text="@string/note"
+        android:visibility="gone"
+        android:textSize="@dimen/font_small" />
+
+    <com.globalnest.classes.MultiDirectionSlidingDrawer
+        xmlns:my="http://schemas.android.com/apk/res/com.globalnest.scanattendee"
+        android:id="@+id/salestaxwheel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        my:content="@+id/content"
+        my:direction="bottomToTop"
+        my:handle="@+id/handle" >
+
+        <include
+            android:id="@+id/content"
+            layout="@layout/wheel_layout" />
+
+        <ImageView
+            android:id="@+id/handle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/drawerhandle" />
+    </com.globalnest.classes.MultiDirectionSlidingDrawer>
+
+</LinearLayout>

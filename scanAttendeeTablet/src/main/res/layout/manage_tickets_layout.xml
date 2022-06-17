@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ccc" >
+
+    <LinearLayout
+        android:id="@+id/loadtickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleLargeInverse"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Loading,please wait..."
+            android:textColor="@color/setting_bg1"
+            android:textSize="@dimen/font_title" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notickets"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/no_ticket_icon"
+        android:gravity="center"
+        android:text="@string/no_ticket"
+        android:textColor="@color/gray_color"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/ticketpager_no_need"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/white"
+        android:divider="@null"
+        android:visibility="gone" >
+    </ListView>
+
+    <!--<com.globalnest.utils.PullToRefreshListView-->
+     <ListView
+        android:id="@+id/ticketpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="5dp"
+        android:divider="@null"
+        android:scrollingCache="@android:color/holo_blue_light" />
+
+    <TextView
+        android:id="@+id/btnticketcart"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/ticketpager"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:background="@color/check_color"
+        android:gravity="center"
+        android:text="@string/addtocart"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_big"
+        android:visibility="gone" />
+    //need to add padding for pull to refresh when tab is visible
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/green_button_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tab_active"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/green_button_color"
+            android:gravity="center"
+            android:text="ACTIVE"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tab_inactive"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="IN-ACTIVE"
+            android:textColor="@color/green_button_color"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <com.globalnest.classes.MultiDirectionSlidingDrawer
+        xmlns:my="http://schemas.android.com/apk/res/com.globalnest.scanattendee"
+        android:id="@+id/cartslider"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|top"
+        my:content="@+id/content"
+        my:direction="bottomToTop"
+        android:layout_marginTop="5dp"
+        my:handle="@+id/handle" >
+
+        <include
+            android:id="@+id/content"
+            layout="@layout/ticket_cart_layout" />
+
+        <ImageView
+            android:id="@+id/handle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/drawerhandle" />
+    </com.globalnest.classes.MultiDirectionSlidingDrawer>
+
+</RelativeLayout>

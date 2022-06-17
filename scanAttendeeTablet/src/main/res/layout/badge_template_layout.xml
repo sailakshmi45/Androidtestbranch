@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color"
+     >
+    
+    <LinearLayout
+        android:id="@+id/loadbadges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLargeInverse"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip" />
+
+        <TextView
+            android:id="@+id/txtloadmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:paddingLeft="5.0dip"
+            android:gravity="center_vertical"
+            android:text="Loading templates,please wait..."
+            android:textColor="@color/setting_bg1"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+    
+    <com.globalnest.utils.PullToRefreshListView 
+        android:id="@+id/badgelistview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"/>
+
+      <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:orientation="vertical" 
+        android:gravity="center_horizontal"
+        android:visibility="visible"
+        android:id="@+id/linear_badge_parent">
+        </FrameLayout>
+</FrameLayout>

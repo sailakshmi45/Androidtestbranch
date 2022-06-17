@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_layout"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="false"
+        android:padding="5dp" >
+        <!-- <CheckBox
+             android:id="@+id/check_select"
+             android:layout_width="32dp"
+             android:layout_height="32dp"
+             android:layout_gravity="left|center"
+             android:gravity="center"
+             android:layout_marginRight="5dp"
+             android:padding="5dp"
+             android:button="@drawable/check_box_buyer_level"
+              />-->
+
+
+        <ImageView
+            android:id="@+id/check_unselect"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginRight="7dp"
+            android:padding="5dp"
+            android:src="@drawable/uncheck_new"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="false"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/txt_attendeename"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="45dp"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:text="Attendee"
+                android:textColor="@color/black_faded"
+                android:textSize="@dimen/font_normal"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/txt_attendeecompany"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="45dp"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:text="Google Inc."
+                android:textColor="@color/darl_gray_text_color"
+                android:textSize="@dimen/font_small" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginRight="45dp"
+                >
+                <TextView
+                    android:id="@+id/ticketnameandnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:text="TKT-123"
+                    android:textColor="@color/blue_text_color"
+                    android:textSize="@dimen/font_v_small"
+                    android:textStyle="italic"
+                    android:minEms="12"
+                    android:layout_marginRight="3dp"
+                   />
+                <TextView
+                    android:id="@+id/txt_badgeheading"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="Badge Status: "
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:textSize="12dp" />
+                <TextView
+                    android:id="@+id/txtbadgeprintstatus"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/orange_bg"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img_print_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="40dp"
+            android:gravity="right"
+            android:background="@drawable/print"
+            android:visibility="gone"/>
+        <CheckBox
+            android:id="@+id/check_print"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:button="@drawable/checkbox_square"
+            android:padding="5dp"
+            android:focusable="false"
+
+            />
+    </FrameLayout>
+
+</LinearLayout>

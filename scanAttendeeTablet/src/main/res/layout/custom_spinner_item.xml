@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+    
+    <com.globalnest.classes.RoundedImageView
+                    android:id="@+id/imgprofile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/default_image" />
+
+    <TextView
+        android:id="@+id/text_main_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/imgprofile"
+        android:padding="0dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#1d97dd"
+        android:textStyle="bold" />
+
+   
+
+</RelativeLayout>

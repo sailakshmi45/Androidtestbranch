@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtnetworkerror"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/orange_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/network_error"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_big"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/splashlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/welcomelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/app_icon_1" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="@string/welcome"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_tablet_big" />
+
+                <ProgressBar
+                    android:id="@+id/loadsplash"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:indeterminateDrawable="@drawable/my_progress_indeterminate"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/btnsignup"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="80dp"
+                    android:background="@drawable/signup_button_list_selector"
+                    android:text="@string/signup"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_v_big" />
+
+                <Button
+                    android:id="@+id/btnlogin"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/signin_button_selector"
+                    android:text="@string/signin_accout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_v_big" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="500dp"
+    android:background="@drawable/dialog_border"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_border"
+        android:orientation="vertical" >
+        
+        
+         <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_vertical" >
+
+            <ImageView
+                android:id="@+id/softscanclose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/close_buttons" />
+
+            <TextView
+                android:id="@+id/txt_saveasPDF"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/rounded_corner_green"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="OPEN AS PDF"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_vertical" >
+
+            <TextView
+                android:id="@+id/steptitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Steps For Soft Scanner"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_header" />
+
+            <!-- <ImageView
+                android:id="@+id/softscanclose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/close_buttons" /> -->
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_shadow" >
+        </FrameLayout>
+        
+         
+        <TextView
+            android:id="@+id/txt_socketStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/red_circle_1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="Not Connected"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            android:textStyle="bold" />
+        
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+             android:visibility="gone"
+            android:background="@color/white_shadow" >
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/card_layout"
+            android:padding="0dp" 
+            android:gravity="center_horizontal">
+
+            <com.globalnest.scanattendee.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background_tab" />
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/card_layout"
+            tools:context=".MainActivity" >
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+</LinearLayout>

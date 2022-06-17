@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_border"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <View
+            android:id="@+id/status_bar"
+            android:layout_width="5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/darl_gray_text_color"
+            android:layout_marginRight="10dp">
+
+        </View>
+        <FrameLayout
+            android:id="@+id/date_layout"
+            android:layout_width="85dp"
+            android:layout_height="100dp" >
+
+            <TextView
+                android:id="@+id/txt_image"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:background="#D8D8D8"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="NO"
+                android:textColor="@color/blue_text_color"
+                android:textSize="30dp" >
+            </TextView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:id="@+id/txt_offlinename"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_offline_tag"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="5dp"
+                android:text="OFFLINE"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/txt_offlineerror"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="5dp"
+                android:text="error"
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/txt_dateTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Date"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+      <!--<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.5">
+        <Button
+            android:id="@+id/btn_status"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|center"
+            android:background="@drawable/red_price_bg"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="Check-Out"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+        </LinearLayout>-->
+    </LinearLayout>
+
+    <!--
+         <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dp" />
+
+
+
+
+    -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/b1_transparent" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="0dp" >
+
+        <TextView
+            android:id="@+id/txteventdesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginRight="55dp"
+            android:drawableLeft="@drawable/more"
+            android:drawablePadding="15dp"
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:text="This is event description which is going to happen tomorrrow tank you"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_n_small"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/delete_attendee" />
+
+        <FrameLayout
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/b1_transparent" />
+
+        <TextView
+            android:id="@+id/txt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="OFFLINE"
+            android:textColor="@color/black" />
+    </FrameLayout>
+
+</LinearLayout>

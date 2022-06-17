@@ -1,0 +1,1440 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:example="http://schemas.android.com/apk/res/com.globalnest.scanattendee"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layout_printer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="Printers"
+                        android:textColor="@android:color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/img_printer"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="1dp"
+                            android:background="@drawable/red_circle_1" />
+
+                        <TextView
+                            android:id="@+id/txt_on_off_printer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="Not Connected"
+                            android:textColor="@color/gray_color"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/txt_printer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:text=""
+                            android:textColor="@color/gray_color" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/info_zebra"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:background="@drawable/info_blue"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+
+            <FrameLayout
+                android:id="@+id/layout_scanners"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txt_scanner_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="Scanners"
+                        android:textColor="@android:color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/img_scanner"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/red_circle_1" />
+
+                        <TextView
+                            android:id="@+id/txt_on_off_scanner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="Not Connected"
+                            android:textColor="@color/gray_color"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_battery_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginLeft="12dp"
+                    android:text="Battery Level"
+                    android:textColor="@color/gray_color" />
+
+                <Button
+                    android:id="@+id/btn_scanner_settings"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/top_setting" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/layout_bluetooth"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="Bluetooth Device"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/img_bluetooth"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/red_circle_1" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_bluetooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="Not Connected"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quick_checkin"
+                        android:textColor="@android:color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_checkin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_checkin"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/print_on_scan"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_print"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_print"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/custom_barcode"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_barcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_custmbarcode"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Allow Promocode"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_promocode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_promocode"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/double_side_badge"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_doubleSideBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_doubleSideBadge"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:weightSum="1">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mirror Single Image"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    android:id="@+id/radio_mirror_two_in_one"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mirror Separate Image"
+                    android:layout_margin="5dp"
+                    android:id="@+id/radio_mirror"
+                    />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identical Single Image"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    android:id="@+id/radio_identical_two_in_one"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identical Separate Image"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="50dp"
+                    android:checked="true"
+                    android:id="@+id/radio_identical"
+                    android:layout_weight="0.20" />
+            </RadioGroup>
+
+
+
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Offline Mode"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_offlinemode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_offline_mode"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:visibility="visible"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Validate Badge"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_validate_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_validate_badge"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:visibility="visible"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+          <!--  <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />-->
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I Don't have Email"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_idonthaveemail"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:visibility="visible"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"
+                android:background="@android:color/darker_gray" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Online Mode"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_offlineScan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_onlinemode"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+
+            <!--<View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="visible" />-->
+            <!-- <LinearLayout
+                 android:id="@+id/layout_reset_settings"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:paddingTop="10dp" >
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="25dp"
+                     android:text="Reset Default Settings"
+                     android:textColor="@android:color/black"
+                     android:textSize="18dp" />
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="5dp"
+                     android:layout_marginTop="2dp"
+                     android:orientation="horizontal" >
+
+                     <ImageView
+                         android:id="@+id/img_bluetooth"
+                         android:layout_width="8dp"
+                         android:layout_height="8dp"
+                         android:layout_gravity="center"
+                         android:background="@drawable/red_circle_1"
+                         android:visibility="invisible" />
+
+                     <TextView
+                         android:id="@+id/txt_on_off_bluetooth"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="12dp"
+                         android:text="Tap to Reset Settings"
+                         android:textColor="@color/blue_text_color"
+                         android:textSize="12dp" />
+                 </LinearLayout>
+             </LinearLayout>-->
+            <!-- <View
+                 android:layout_width="fill_parent"
+                 android:layout_height="1dp"
+                 android:layout_marginLeft="25dp"
+                 android:layout_marginTop="3dp"
+                 android:background="@android:color/darker_gray" />
+ -->
+            <LinearLayout
+                android:id="@+id/layout_refreshcheckins"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="Refresh Checkins"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/img_bluetooth"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/red_circle_1"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_bluetooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text=""
+                        android:textColor="@color/blue_text_color"
+                        android:textSize="12dp" />
+                    <ProgressBar
+                        android:id="@+id/progress_loader"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Allow Live Data Updates"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/livedata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Live Data checkins and printstatus"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_livedata"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+         <!--   <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />-->
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Group Check-ins"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Group checkins will enable in Attendee list"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_groupcheckin"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Badge Pixel Settings"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_pixelvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Default value is 96 (Don't change unless if it needed)"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/right_pixelvalue"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:drawablePadding="1dp"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:drawableTint="@color/gray_color"
+                    android:checked="false"
+                    android:textColor="@color/gray_color"
+                    android:hint="96"
+                    />
+            </FrameLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Allow App Permissions"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_permission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Without Permissions Printing and Scanning may get issues.Please Allow!"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_apppermission"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray" />
+            <FrameLayout
+                android:id="@+id/frame_zebrasettings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zebra printer advance settings"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txt_on_off_zebra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Turned OFF"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggle_zebra"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+
+
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/checkin_out_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="500"
+                example:content1="@+id/linear_checkin_out"
+                example:handle1="@+id/frame_checkin_out"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/linear_checkin_out" >
+
+                <FrameLayout
+                    android:id="@+id/frame_checkin_out"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/header_selector" >
+
+                    <TextView
+                        android:id="@+id/txt_checkout_settings"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="left"
+                        android:drawableRight="@drawable/plus_green"
+                        android:gravity="center|left"
+                        android:padding="10dp"
+                        android:text="CHECKIN SETTINGS"
+                        android:textColor="@color/green_button_color"
+                        android:textSize="@dimen/font_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_checkin_out"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RadioGroup
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/radio_checkin_only"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layoutDirection="rtl"
+                            android:layout_marginRight="10dp"
+                            android:text="Record Check in only"
+                            android:textSize="18dp"
+                            android:layout_marginTop="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="It will record only checkins times."
+                            android:textColor="@color/gray_color"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="30dp"/>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <RadioButton
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/radio_checkin_out"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layoutDirection="rtl"
+                            android:layout_marginRight="10dp"
+                            android:text="Record Check in and Check out"
+                            android:textSize="18dp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="It will record check in and checkout times."
+                            android:textColor="@color/gray_color"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="30dp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/ticketsettingpanel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="500"
+                example:content1="@+id/settingoption"
+                example:handle1="@+id/ticketdefaultsetting"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/settingoption" >
+
+                <FrameLayout
+                    android:id="@+id/ticketdefaultsetting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/header_selector" >
+
+                    <TextView
+                        android:id="@+id/txt_moreSetting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:drawableRight="@drawable/plus_green"
+                        android:gravity="center|left"
+                        android:padding="10dp"
+                        android:text="MORE SETTINGS"
+                        android:textColor="@color/green_button_color"
+                        android:textSize="@dimen/font_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/settingoption"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <FrameLayout
+                        android:id="@+id/layout_download"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Download Event Orders"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18dp" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress_loader"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:visibility="gone"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(Includes Cancel Orders)"
+                                android:textColor="@color/gray_color"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/txt_download_attendees_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text=""
+                                android:textColor="@color/gray_color"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp" >
+
+                            <ImageView
+                                android:id="@+id/img_download"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:src="@drawable/fulldownload" />
+
+                            <!--
+                         <ProgressBar
+                        android:id="@+id/progress_download_data"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="right|center"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:progressDrawable="@drawable/progressbar_states"
+                        android:visibility="gone" />
+
+
+
+
+
+
+
+
+
+
+
+                            -->
+
+                            <com.globalnest.classes.RateTextCircularProgressBar
+                                android:id="@+id/progress_download_data"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="right|center"
+                                android:focusable="false"
+                                android:gravity="center"
+                                android:visibility="gone" />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@android:color/darker_gray" />
+                    <FrameLayout
+                        android:id="@+id/layout_export"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Export Offline Scans"
+                                android:textColor="@android:color/black"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/txt_export"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Turned OFF"
+                                android:textColor="@color/gray_color"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_export"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/exportscans" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <FrameLayout
+                        android:id="@+id/layout_import"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Import Offline Scans"
+                                android:textColor="@android:color/black"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/txt_import"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="You can use offline sheet from ScanAttendee only"
+                                android:textColor="@color/gray_color"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_import"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/download_img" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@android:color/darker_gray" />
+
+
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/reset_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="500"
+                example:content1="@+id/layout_reset_settings"
+                example:handle1="@+id/frame_reset"
+                example:viewgroup="@+id/layout_reset_settings"
+                example:isviewgroup="true"
+                >
+
+                <FrameLayout
+                    android:id="@+id/frame_reset"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/header_selector" >
+
+                    <TextView
+                        android:id="@+id/txt_reset_settings"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="left"
+                        android:drawableRight="@drawable/plus_green"
+                        android:gravity="center|left"
+                        android:padding="10dp"
+                        android:text="RESET SETTINGS"
+                        android:textColor="@color/green_button_color"
+                        android:textSize="@dimen/font_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_reset_settings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="Reset Default Settings"
+                        android:textColor="@android:color/black"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Tap to Reset Settings"
+                        android:textColor="@color/blue_text_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

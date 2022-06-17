@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:background="@android:color/background_light">
+
+    <view
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dip"
+        android:layout_y="0dip"
+        class="com.globalnest.cropimage.CropImageView"/>
+    
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#243B0B"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/discard"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/btn_selector_green"
+            android:layout_height="fill_parent"
+            android:textColor="#FFFFFF"
+            android:layout_marginRight="1dp"
+            android:textSize="16sp"
+            android:text="Cancel" />
+        
+        <!-- <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#FFB670"/> -->
+
+        <ImageButton
+            android:id="@+id/rotateLeft"
+            android:layout_width="50dp"
+            android:background="@drawable/btn_selector_green"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="1dp"
+            android:src="@drawable/left" />
+        <!-- <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#FFB670"/> -->
+
+        <ImageButton
+            android:id="@+id/rotateRight"
+            android:background="@drawable/btn_selector_green"
+            android:layout_width="50dp"
+            android:layout_marginRight="1dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/right" />
+        <!-- <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#FFB670"/> -->
+
+        <Button
+            android:id="@+id/save"
+            android:background="@drawable/btn_selector_green"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="fill_parent"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="Save" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txttotallabel"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/green_button_color"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Total Amount"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="45dp" >
+
+        <com.globalnest.utils.PullToRefreshListView
+            android:id="@+id/salesListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/screen_bg_color"
+            android:divider="@null"
+            android:scrollingCache="@android:color/holo_blue_light" />
+
+        <TextView
+            android:id="@+id/noamt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/no_order"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_title"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!--
+    <LinearLayout
+        android:id="@+id/loadsalesorders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLargeInverse"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip" />
+
+        <TextView
+            android:id="@+id/txtload"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="5.0dip"
+            android:text="Loading,please wait..."
+            android:textColor="@color/setting_bg1"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+    -->
+
+</FrameLayout>

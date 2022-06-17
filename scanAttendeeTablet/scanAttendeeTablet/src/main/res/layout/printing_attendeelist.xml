@@ -1,0 +1,171 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <FrameLayout
+        android:id="@+id/linear_badge_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible" >
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frame_transparentbadge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha=".2"
+        android:background="#000000"
+        android:visibility="visible" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <FrameLayout
+            android:id="@+id/frame_attdetailqrcodebadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:visibility="visible" >
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/screen_bg_color"
+        android:orientation="vertical" >
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/screen_bg_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ticket Type"
+                    android:textStyle="bold"
+                    android:textSize="12dp"/>
+                <Spinner
+                    android:id="@+id/spnr_item_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:visibility="visible"
+                    >
+
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Print Status"
+                    android:textStyle="bold"
+                    android:textSize="12dp"/>
+            <Spinner
+                android:id="@+id/spnr_badge_status"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="right|center_vertical"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:entries="@array/staticbadgestatus_list"
+                android:layout_weight="1">
+            </Spinner>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            <CheckBox
+                android:id="@+id/checkbox_selectall"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:text="Select All"
+                android:layout_marginRight="10dp"
+                android:gravity="center|center_vertical"
+                android:textSize="18dp"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_square"
+                />
+                <TextView
+                    android:id="@+id/txt_printselected"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_effect" />
+
+        <TextView
+            android:id="@+id/txt_global_scan_oops"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="Opps! No Record Found"
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/checkinticketview"
+        android:layout_marginTop="60dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="1dp"
+        >
+    </ListView>
+</FrameLayout>

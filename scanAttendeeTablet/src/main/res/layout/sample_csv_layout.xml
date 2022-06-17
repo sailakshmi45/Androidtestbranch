@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true" >
+
+                <LinearLayout
+                    android:id="@+id/directchild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal" >
+
+                    <TableLayout
+                        android:id="@+id/tabla_cuerpo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp" >
+
+                        <TableRow
+                            android:id="@+id/tableRow1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/screen_bg_color" >
+
+                            <TextView
+                                android:id="@+id/txtsamplefname"
+                                style="@style/CSVTextViewHeaderStyle"
+                                android:text="First Name" />
+
+                            <TextView
+                                android:id="@+id/txtsamplelname"
+                               style="@style/CSVTextViewHeaderStyle"
+                                android:text="Last Name" />
+
+                            <TextView
+                                android:id="@+id/txtsampleemail"
+                                 style="@style/CSVTextViewHeaderStyle"
+                                android:text="Email Id" />
+
+                            <TextView
+                                android:id="@+id/txtsamplephone"
+                                style="@style/CSVTextViewHeaderStyle"
+                                android:text="Phone" />
+
+                            <TextView
+                                android:id="@+id/txtsamplecompany"
+                                style="@style/CSVTextViewHeaderStyle"
+                                android:text="Company" />
+
+                            <TextView
+                                android:id="@+id/txtsamplejobtitle"
+                                style="@style/CSVTextViewHeaderStyle"
+                                android:text="Job Title" />
+
+                            <TextView
+                                android:id="@+id/txtsampleattcategory"
+                                style="@style/CSVTextViewHeaderStyle"
+                                android:text="Attendee Category" />
+
+                            <TextView
+                                android:id="@+id/txtsampleaddress"
+                                 style="@style/CSVTextViewHeaderStyle"
+                                android:text="Address" />
+
+                            <TextView
+                                android:id="@+id/txtsamplecity"
+                                android:text="City" />
+
+                            <TextView
+                                android:id="@+id/txtsamplestate"
+                               style="@style/CSVTextViewHeaderStyle"
+                                android:text="State" />
+
+                            <TextView
+                                android:id="@+id/txtsamplezipcode"
+                                 style="@style/CSVTextViewHeaderStyle"
+                                android:text="Zip Code" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Joe" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Smith" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="joe@joe.com" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="(888) 888-8888" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Acme Corp" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Sales Manager" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Attendee" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="1 Main Street" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="New York" />
+
+                            <TextView
+                                
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="NY" />
+
+                            <TextView
+                               
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="10001" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Tom" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Miller" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="tom@tom.com" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="(777) 777-7777" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Tom Corp" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Product Designer" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Exhibitor" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="10 Main Street" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="Chicago" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="IL" />
+
+                            <TextView
+                                style="@style/CSVTextViewFieldStyle"
+                                android:text="60605" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtcsvnote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Note : "
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/txtcsvnote1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="1. File needs to be in the CSV format. Please add the data and save the file in Dropbox to import into the Scan Attendee app."
+                android:textAlignment="center"
+                android:textColor="@color/gray_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtcsvnote2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="2. The order of the columns is not important, but column names are important."
+                android:textAlignment="center"
+                android:textColor="@color/gray_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtcsvnote3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="3. Columns Names are not case sensitive."
+                android:textAlignment="center"
+                android:textColor="@color/gray_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtcsvnote4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="4. The CSV file will be processed from Top to Bottom."
+                android:textAlignment="center"
+                android:textColor="@color/gray_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtcsvnote5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="5. If two records have the same email ids, then the two records will be grouped in to one record with 2 attendees and data will be updated with the lastest record."
+                android:textAlignment="center"
+                android:textColor="@color/gray_color"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btnexportcsv"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button_selector"
+                android:text="SEND SAMPLE CSV"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_title" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

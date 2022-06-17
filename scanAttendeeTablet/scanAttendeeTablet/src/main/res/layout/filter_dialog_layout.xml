@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/layer_card_background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtsortby"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:text="SORT BY"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/setting_bg" />
+
+    <TextView
+        android:id="@+id/txtsort1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/text_btn_effect"
+        android:gravity="center"
+        android:text="ALL"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/header_stroke" />
+
+    <TextView
+        android:id="@+id/txtsort2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="TICKET"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/header_stroke" />
+
+    <TextView
+        android:id="@+id/txtsort3"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="ITEM"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:id="@+id/line4"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/header_stroke"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtsort4"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="CHECK"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_normal"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/line5"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/header_stroke"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtsort5"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="FREE PAY"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_normal"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/line6"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/header_stroke"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtsort6"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="GUEST"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_normal"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/header_stroke" />
+
+    
+    <TextView
+        android:id="@+id/txtsortcancel"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="CANCEL"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_normal" />
+
+</LinearLayout>

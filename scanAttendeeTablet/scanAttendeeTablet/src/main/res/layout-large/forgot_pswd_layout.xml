@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   
+    android:background="@color/popup_transparent" >
+
+   
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+         android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/bg_popup"
+        android:orientation="vertical" >
+<FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp" >
+
+            <TextView
+                android:id="@+id/loginerrormsg"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:background="@color/error_bg"
+                android:gravity="center"
+               android:padding="3dp"
+                android:text="@string/signin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"
+                android:visibility="gone" />
+        <TextView
+            android:id="@+id/txtforgotpswd"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:background="@color/popup_header"
+            android:gravity="center"
+           
+            android:text="@string/f_pswd"
+            android:textColor="@color/popup_header_text_color"
+            android:textSize="@dimen/font_v_big" />
+</FrameLayout>
+        <EditText
+            android:id="@+id/fpswdemal"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            
+            android:background="@drawable/edittext_border_effect"
+            android:hint="Please enter your email address"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="7dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_title" />
+
+       
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnfpswdcancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/signup_button_list_selector"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_header" />
+
+                <FrameLayout
+                    android:layout_width="20dp"
+                    android:layout_height="fill_parent" />
+
+                <Button
+                    android:id="@+id/btnfpswdsend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/done_button_effect"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_header" />
+            </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

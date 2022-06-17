@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <TextView
+        android:id="@+id/txtcashmode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:text="PAYPAL"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_header" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/dotted_line" />
+
+    <LinearLayout
+        android:id="@+id/paypalprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:id="@+id/txtprogress"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="Loading paypal library" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtpaypalerror"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/error_bg"
+        android:gravity="center"
+        android:text="@string/paypal_error"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/paypaypallayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" >
+    </RelativeLayout>
+
+</LinearLayout>

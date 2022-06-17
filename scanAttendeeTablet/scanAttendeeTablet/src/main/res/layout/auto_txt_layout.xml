@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/autotext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:autoSizeTextType="uniform"
+        android:textSize="20dp"
+        android:text="hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii3888888888888888888888888888888884444444444411111111111111111110"
+        app:autoSizeMinTextSize="3sp"
+        app:autoSizeMaxTextSize="200sp"
+        android:maxLines="1"
+        app:autoSizeStepGranularity="2sp" />
+</LinearLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/card_layout"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/line_effect"
+            android:orientation="vertical"
+            android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Ticket Amount"
+                    android:textColor="@color/black_faded"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/_txttotal_amount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="00.00"
+                    android:textColor="@color/gray_color"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Discount Amount"
+                    android:textColor="@color/black_faded"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/txt_discountedamount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="00.00"
+                    android:textColor="@color/gray_color"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1.5"
+                    android:gravity="left"
+                    android:text="Service Fee"
+                    android:textColor="@color/black_faded"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/_txttotal_fee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="00.00"
+                    android:textColor="@color/gray_color"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1.5"
+                    android:gravity="left"
+                    android:text="Ticket Tax"
+                    android:textColor="@color/black_faded"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/_txttotal_tax"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="00.00"
+                    android:textColor="@color/gray_color"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <!--
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Total Amount"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal" />
+
+               
+
+                <TextView
+                    android:id="@+id/_txttotal_payable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="420.00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+
+
+            -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:scaleType="matrix" >
+
+            <TextView
+                android:id="@+id/_txttotal_payable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="$00.00"
+                android:textColor="@color/light_blue"
+                android:textSize="28dp"
+                android:typeface="serif" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/card_layout"
+         >
+
+        <com.globalnest.scanattendee.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_tab" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/card_layout"
+        tools:context=".MainActivity" >
+    </androidx.viewpager.widget.ViewPager>
+    <FrameLayout
+        android:id="@+id/frame_transparentbadge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha=".2"
+        android:background="#000000"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <FrameLayout
+            android:id="@+id/frame_attdetailqrcodebadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:visibility="visible" >
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

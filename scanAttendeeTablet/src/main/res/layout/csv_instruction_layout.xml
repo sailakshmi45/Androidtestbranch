@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/shadow_border"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/steptitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Follow the below instructions to import attendees."
+                android:textColor="@color/orange_bg"
+                android:textSize="@dimen/font_title" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/header_stroke" />
+
+            <TextView
+                android:id="@+id/stepmsg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:text="1. File type should be .CSV format."
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/stepmsg1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:text="2. CSV file should be saved in Dropbox."
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/stepmsg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="To import attendees:"
+                android:textColor="@color/orange_bg"
+                android:textSize="@dimen/font_title" />
+
+            <TextView
+                android:id="@+id/stepmsg3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:text="* Import record should contain First name, Last Name and Email ID."
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/stepmsg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="Failed records:"
+                android:textColor="@color/orange_bg"
+                android:textSize="@dimen/font_title" />
+
+            <TextView
+                android:id="@+id/stepmsg5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:text="1. If the import record does not contain the mandatory fields i.e First name, Last Name and Email ID, then that record will not be imported."
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/stepmsg6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:text="2. If email format is not correct then the record will not be imported."
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/stepmsg7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:text="3. You will receive an email with all the rejected records."
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

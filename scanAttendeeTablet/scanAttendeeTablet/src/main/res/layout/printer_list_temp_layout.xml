@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lay_BrotherProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/indeterminateProgressStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:progressTint="@color/event_date_green_bg1"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/txt_PrinterFound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="Searching Printers..."
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+            <!--
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+                            <ProgressBar
+                                android:id="@+id/progress_zebra"
+                                style="?android:attr/indeterminateProgressStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:progressTint="@color/event_date_green_bg1" />
+
+                            <TextView
+                                android:id="@+id/txt_ZebraPrinterFound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="Searching..." />
+                        </LinearLayout>
+            -->
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cloud_print"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txt_on_off_cloud_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Turned ON"
+                android:textColor="@color/green_connected"
+                android:visibility="invisible"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/toggle_cloud_print"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/toggle_selector"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/lay_fitToPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <CheckBox
+            android:id="@+id/check_fitToPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fit To Page"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="3dp"
+        android:background="@android:color/darker_gray" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bluetooth Printers"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txt_on_off_bluetooth_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Turned ON"
+                android:visibility="invisible"
+                android:textColor="@color/green_connected"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/toggle_bluetooth_print"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/toggle_selector"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </FrameLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="3dp"
+        android:background="@android:color/darker_gray" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wifi Printers"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txt_on_off_other_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Turned ON"
+                android:visibility="invisible"
+                android:textColor="@color/green_connected"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/toggle_wifi_print"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/toggle_selector"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="3dp"
+        android:background="@android:color/darker_gray" />
+
+    <!--<View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="3dp"
+        android:background="@android:color/darker_gray" />
+
+        <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bluetooth Printers"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txt_on_off_bluetooth_printer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Turned ON"
+                android:textColor="@color/gray_color"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/toggle_bluetooth_print"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/toggle_selector"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="3dp"
+        android:background="@android:color/darker_gray" />-->
+    <!--<RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:id="@+id/radio_googleprinters"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Google Cloud Printers"
+            android:textSize="22dp"
+            />
+
+
+        <RadioButton
+            android:id="@+id/radio_bluetoothprinters"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth Printers"
+            android:textSize="22dp"/>
+        <RadioButton
+            android:id="@+id/radio_wifiprinters"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Wifi Printers"
+            android:textSize="22dp"/>
+    </RadioGroup>-->
+    <ListView
+        android:id="@+id/listView_brother"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/listView_zebra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/txt_bluetooth"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Bluetooth Printers"
+        android:gravity="center|left"
+        android:layout_gravity="center|left"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:background="@color/com_facebook_button_background_color_disabled"/>
+    <ListView
+        android:id="@+id/listView_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/listView_zebrabluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+
+
+    <!--<ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_event_statistics"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_event_statistics"
+                example:handle1="@+id/layout_event_statistics"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_event_statistics">
+
+                <FrameLayout
+                    android:id="@+id/layout_event_statistics"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_statistics"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_groupText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="50dp"
+                        android:text="Brother Printers"
+                        android:textColor="@color/green_button_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_bRefresh"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/refresh" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_event_statistics"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lay_BrotherProgress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progress_brother"
+                            style="?android:attr/indeterminateProgressStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/event_date_green_bg1" />
+
+                        <TextView
+                            android:id="@+id/txt_BrotherPrinterFound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Searching Printers..." />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/listView_brother"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_200dp"></ListView>
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_ticket_sales"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_ticket_sales"
+                example:handle1="@+id/layout_ticket_sales"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_ticket_sales">
+
+                <FrameLayout
+                    android:id="@+id/layout_ticket_sales"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_ticket_sales"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_groupText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="50dp"
+                        android:text="Zebra Printers"
+                        android:textColor="@color/green_button_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_zRefresh"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/refresh" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_ticket_sales"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lay_ZebraProgress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progress_zebra"
+                            style="?android:attr/indeterminateProgressStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/event_date_green_bg1" />
+
+                        <TextView
+                            android:id="@+id/txt_ZebraPrinterFound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Searching Printers..." />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/listView_zebra"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_200dp"></ListView>
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+        </LinearLayout>
+    </ScrollView>-->
+
+</LinearLayout>

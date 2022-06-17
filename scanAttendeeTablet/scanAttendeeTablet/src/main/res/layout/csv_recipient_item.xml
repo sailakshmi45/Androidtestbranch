@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp" >
+
+        <EditText
+            android:id="@+id/editrecipient"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="45dp"
+            android:background="@color/white"
+            android:hint="Recipinet email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal" />
+
+        <Button
+            android:id="@+id/btndeleterecipient"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/cross" >
+        </Button>
+    </FrameLayout>
+
+</LinearLayout>

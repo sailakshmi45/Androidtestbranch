@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtappfee"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Scan Attendee fee : 3.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal_big" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/header_stroke" />
+
+    <Switch
+        android:id="@+id/switch_include"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="@string/fee"
+        android:textSize="@dimen/font_header" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/header_stroke" />
+
+    <TextView
+        android:id="@+id/txtoption1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="7dp"
+        android:text=" Include the Booth Leads fee in to the total ticket price."
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_title" />
+
+    <TextView
+        android:id="@+id/txtoption2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Add Booth Leads fee on top of the total ticket price."
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_title" />
+ <TextView
+        android:id="@+id/txtfeenote"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="25dp"
+        android:gravity="center"
+        android:textColor="@color/gray_color"
+        android:textSize="15dp" />
+</LinearLayout>

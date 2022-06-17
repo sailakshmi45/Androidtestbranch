@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btntype"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/cash_sales_button_bg" />
+
+        <TextView
+            android:id="@+id/txtname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Ticket Name"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>

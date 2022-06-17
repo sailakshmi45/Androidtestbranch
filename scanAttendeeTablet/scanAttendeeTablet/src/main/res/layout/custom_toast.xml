@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/custom_toast_layout"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom|center"
+    android:layout_marginBottom="100dp"
+    >
+
+    <ImageView
+        android:id="@+id/custom_toast_image"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:src="@drawable/img_like"
+        android:visibility="gone"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/custom_toast_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="This is custom toast message"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        />
+</LinearLayout>

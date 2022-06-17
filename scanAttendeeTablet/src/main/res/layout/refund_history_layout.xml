@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtrefundtotal"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/green_button_color"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Total :"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_header" />
+
+    <GridView
+        android:id="@+id/refundgridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="1"
+        android:stretchMode="columnWidth" />
+
+    <TextView
+        android:id="@+id/norefundfound"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="There are no refunded orders."
+        android:textColor="@color/gray_color"
+        android:textSize="@dimen/font_header"
+        android:visibility="gone" />
+
+</FrameLayout>

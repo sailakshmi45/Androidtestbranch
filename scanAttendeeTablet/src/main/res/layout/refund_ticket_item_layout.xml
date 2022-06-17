@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ticket_bg_border"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp" >
+
+        <TextView
+            android:id="@+id/isrefundticket"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:drawableTop="@drawable/checkmark_n"
+            android:background="@drawable/text_btn_effect"
+            android:gravity="center"
+            android:text="Refund"
+            android:textColor="@color/green_button_color"
+            android:textSize="@dimen/font_small" />
+        <FrameLayout 
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="60dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@color/header_stroke"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:orientation="vertical" >
+
+               <TextView
+                    android:id="@+id/refundaname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dp"
+                      android:gravity="left|center_vertical"
+                    android:text="Scan Attendee"
+                    android:textColor="@color/orange_bg"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/refundtnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                   android:layout_marginLeft="5dp"
+                   android:paddingTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Ticket No: T-37073"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+                 <TextView
+                    android:id="@+id/refundtamt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                   android:layout_marginLeft="5dp"
+                   android:paddingTop="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Refund Price: $20.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+           
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

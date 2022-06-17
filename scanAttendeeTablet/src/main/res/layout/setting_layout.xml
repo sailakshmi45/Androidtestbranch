@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settingpopup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/setting_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtdropbox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawableLeft="@drawable/dropbox_icon"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="Dropbox"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/setting_line"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtstripe"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawableLeft="@drawable/paysettings"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="Pay Settings"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/setting_line" />
+
+    <TextView
+        android:id="@+id/txtpaypal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="Paypal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/setting_line" />
+
+    <TextView
+        android:id="@+id/txtbadge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawableLeft="@drawable/badge_temp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="Badge Template"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/setting_line" />
+
+    <TextView
+        android:id="@+id/txt_scantickets"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawableLeft="@drawable/tkt_scan"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="Scan Tickets"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/setting_line" />
+
+    <TextView
+        android:id="@+id/txtsalestax"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawableLeft="@drawable/salestax_icon"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="Sales Tax"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/setting_line" />
+
+    <TextView
+        android:id="@+id/txtappfee"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawableLeft="@drawable/fee_icon"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="Fee"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/setting_line" />
+
+    <TextView
+        android:id="@+id/txtuserprofile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawableLeft="@drawable/profile_icon"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="Profile"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/setting_line" />
+
+    <TextView
+        android:id="@+id/txt_ext_setting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/setting_item_selector"
+        android:drawableLeft="@drawable/external_settings"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="External Settings"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+</LinearLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow_border"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="2" >
+        <View
+            android:id="@+id/statusbar"
+            android:layout_width="3dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="3dp"
+            android:background="@color/gray_color"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <TextView
+                android:id="@+id/attendee_buyer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Attendee Name" />
+
+            <com.globalnest.autoresizetextview.AutoResizeTextView
+                android:id="@+id/attendee_ticket_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/light_blue"
+                android:text="TKT-235693" />
+            <com.globalnest.autoresizetextview.AutoResizeTextView
+                android:id="@+id/attendee_ticket_parentname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textSize="13dp"
+                android:textColor="@color/light_blue"
+                android:text="TKT-124567"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/attendee_checkin_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:button="@drawable/check_box_buyer_level"
+            android:padding="25dp" />
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/screen_bg_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/checkinattname"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="60dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/green_flat_color"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold"
+                android:layout_marginRight="75dp"
+                android:singleLine="true"/>
+
+            <LinearLayout
+                android:id="@+id/print_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="100dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                >
+                &lt;!&ndash;android:background="@drawable/rounded_icon_colorbutton"&ndash;&gt;
+                <TextView
+                    android:id="@+id/txt_print"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Print"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/btnprint"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="right"
+                    android:src="@drawable/print"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_title"
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/checkin_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_marginLeft="80dp"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                >
+                &lt;!&ndash; android:background="@drawable/rounded_icon_colorbutton"&ndash;&gt;
+                <ImageView
+                    android:id="@+id/btncheckindone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/checkinandout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_title"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/txt_checkin_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check-In"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/btncheckincancel"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="7dp"
+                android:gravity="right"
+                android:src="@drawable/img_cross"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_title"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="5" >
+        <View
+            android:id="@+id/statusbar"
+            android:layout_width="3dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="3dp"
+            android:background="@color/gray_color"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/attendee_buyer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Attendee Name" />
+
+            <com.globalnest.autoresizetextview.AutoResizeTextView
+                android:id="@+id/attendee_ticket_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/light_blue"
+                android:text="TKT-235693" />
+            <com.globalnest.autoresizetextview.AutoResizeTextView
+                android:id="@+id/attendee_ticket_parentname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textSize="13dp"
+                android:textColor="@color/light_blue"
+                android:text="TKT-124567"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:weightSum="2"
+            android:layout_weight="4"
+            android:visibility="gone">
+        <CheckBox
+            android:id="@+id/check_print"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:button="@drawable/checkbox_square"
+            android:focusable="false"
+            />
+        <CheckBox
+            android:id="@+id/attendee_checkin_checkbox"
+            android:layout_weight="1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/check_box_buyer_level"
+            />
+
+        </LinearLayout>
+    </LinearLayout>-->
+
+</LinearLayout>

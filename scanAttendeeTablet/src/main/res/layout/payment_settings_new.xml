@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:textSize="19dp"
+        android:gravity="center|left"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:text="Payment Gateway Options " />
+
+    <FrameLayout android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"></FrameLayout>
+    <ExpandableListView
+        android:id="@+id/expand_payaments"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:groupIndicator="@null" >
+    </ExpandableListView>
+
+    <FrameLayout android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"></FrameLayout>
+
+    <ExpandableListView
+        android:id="@+id/expand_eventadmin_payinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:groupIndicator="@null" >
+    </ExpandableListView>
+</LinearLayout>

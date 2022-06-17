@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ProgressBar
+            android:id="@+id/dropboxloading"
+             style="?android:attr/progressBarStyleLargeInverse"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/importcsvView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="5dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            
+            android:visibility="gone" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/nofolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="* No CSV File Found *"
+            android:textColor="#7695B4"
+            android:textSize="21dp"
+            android:textStyle="italic"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

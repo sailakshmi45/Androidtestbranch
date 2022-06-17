@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/loadevents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLargeInverse"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip" />
+
+        <TextView
+            android:id="@+id/txtloadeventmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="5.0dip"
+            android:text="Loading,please wait..."
+            android:textColor="@color/setting_bg1"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/eventgridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:listSelector="@drawable/list_selector"
+        android:numColumns="1"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="7dp"
+        android:visibility="gone" />
+
+    <com.globalnest.utils.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_listview_event"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+         android:divider="@null"
+         android:dividerHeight="8dp"
+         android:descendantFocusability="blocksDescendants" 
+        android:background="@color/screen_bg_color"
+        android:scrollingCache="@null" />
+
+    <TextView
+        android:id="@+id/txt_noevent"
+        android:layout_width="wrap_content"
+        android:layout_height="45dip"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="5.0dip"
+        android:text="No Events to display. Click + button to add Event"
+        android:textColor="@color/setting_bg1"
+        android:textSize="@dimen/font_normal_big"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</FrameLayout>

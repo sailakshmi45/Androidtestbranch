@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".TicketCartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+<!--Build.VERSION.SDK_INT-->
+
+        <LinearLayout
+            android:id="@+id/lay_promocode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            >
+        <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_weight="0.7"
+            app:floatingHintTextAppearance="@style/FloatLabel.Label">
+
+            <EditText
+                android:id="@+id/edt_promocode"
+                style="@style/MyTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray_color"
+                android:gravity="left|center"
+                android:hint="Have a Promotional Code?"
+                android:inputType="textCapWords"
+                android:textSize="14dp"
+                android:typeface="normal"></EditText>
+        </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+            <Button
+                android:id="@+id/btnapplynow"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:layout_gravity="right|center"
+                android:text="APPLY"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:background="@color/darl_gray_text_color"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txt_appliedpromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:textColor="@color/green_connected"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+           >
+
+            <TextView
+                android:id="@+id/btnbuynow_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.7"
+                android:lineSpacingExtra="2dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/btnbuynow"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:layout_gravity="right|center"
+                android:background="@drawable/blue_button"
+                android:text="NEXT"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+            >
+
+
+        <ListView
+            android:id="@+id/lstviewcart_t_data"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/order_line_color"
+            android:smoothScrollbar="true"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+</RelativeLayout>

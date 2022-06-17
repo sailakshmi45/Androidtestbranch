@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shadow_border"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/gray_color"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Offline Scans Sync Status"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <FrameLayout
+                android:id="@+id/lay_total_leads"
+                android:layout_width="@dimen/layout_60dp"
+                android:layout_height="@dimen/layout_60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_blue" >
+
+                <TextView
+                    android:id="@+id/txt_totalLeads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="Total Scans"
+                android:textColor="@color/blue_text_color"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <FrameLayout
+                android:id="@+id/lay_total_leads"
+                android:layout_width="@dimen/layout_60dp"
+                android:layout_height="@dimen/layout_60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/green_price_bg" >
+
+                <TextView
+                    android:id="@+id/txt_validLeads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white_shadow"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="Valid Scans"
+                android:textColor="@color/green_button_color"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <FrameLayout
+                android:id="@+id/lay_total_leads"
+                android:layout_width="@dimen/layout_60dp"
+                android:layout_height="@dimen/layout_60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/red_price_bg" >
+
+                <TextView
+                    android:id="@+id/txt_invalidLeads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white_shadow"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="Invalid Scans"
+                android:textColor="@color/orange_bg"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@color/gray_color"
+        android:text="Done"
+        android:textColor="@color/white" 
+        android:textSize="14dp"/>
+
+</LinearLayout>

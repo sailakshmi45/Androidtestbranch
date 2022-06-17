@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="480dp"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:background="@drawable/line_effect"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_dialog_cancle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/cross"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_dialog_save"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/save"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="Edit Check no"
+            android:textColor="@color/green_text_color_selector"
+            android:textSize="@dimen/font_title"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_layout"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/spinner_edit_check_type"
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:layout_weight="0.7"
+                android:imeOptions="actionDone"
+                android:maxLines="2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/intractive_edit_text"
+                android:text="--None--" />
+            <ListView
+                android:id="@+id/paytpye"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+            </ListView>
+            <EditText
+                android:id="@+id/edit_att_check_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/intractive_edit_text"
+                android:hint="Check number"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:textSize="16dp" >
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_PG_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="erreor"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_small"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

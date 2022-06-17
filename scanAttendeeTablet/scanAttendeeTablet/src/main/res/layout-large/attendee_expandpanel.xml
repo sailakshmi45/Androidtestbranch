@@ -1,0 +1,632 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:example="http://schemas.android.com/apk/res/com.globalnest.scanattendee"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:layout_marginBottom="5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_basicinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_basic_information"
+                example:handle1="@+id/layout_basic_information"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_basic_information" >
+
+                <FrameLayout
+                    android:id="@+id/layout_basic_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_basicinfo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_basicinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Basic Information"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_basic_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/basic_information" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_workinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_work_information"
+                example:handle1="@+id/layout_work_information"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_work_information" >
+
+                <FrameLayout
+                    android:id="@+id/layout_work_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_workinfo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_workinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Work Information"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_work_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/work_information" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_Work_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_Work_Address"
+                example:handle1="@+id/layout_Work_Address"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_Work_Address" >
+
+                <FrameLayout
+                    android:id="@+id/layout_Work_Address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_Work_Address"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_Work_Address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Work Address"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_Work_Address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/work_address" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_Billing_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_Billing_Address"
+                example:handle1="@+id/layout_Billing_Address"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_Billing_Address" >
+
+                <FrameLayout
+                    android:id="@+id/layout_Billing_Address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_Billing_Address"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_Billing_Address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Billing Address"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_Billing_Address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/billing_address" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_Home_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_Home_Address"
+                example:handle1="@+id/layout_Home_Address"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_Home_Address" >
+
+                <FrameLayout
+                    android:id="@+id/layout_Home_Address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_Home_Address"
+                        android:layout_width="22dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_Home_Address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Home Address"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_Home_Address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/home_address" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_naicsinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_naics_information"
+                example:handle1="@+id/layout_naics_information"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_naics_information" >
+
+                <FrameLayout
+                    android:id="@+id/layout_naics_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_naicsinfo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_naicsinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="NAICS"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_naics_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/naics_information" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_commoditiesinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_commodities_information"
+                example:handle1="@+id/layout_commodities_information"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_commodities_information" >
+
+                <FrameLayout
+                    android:id="@+id/layout_commodities_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_commoditiesinfo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_commoditiesinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="COMMODITEIS"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_commodities_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/commodities_information" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_diversitiesinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_diversities_information"
+                example:handle1="@+id/layout_diversities_information"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_diversities_information" >
+
+                <FrameLayout
+                    android:id="@+id/layout_diversities_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_diversitiesinfo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_diversitiesinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Diversities"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_diversities_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/diversities_information" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+
+
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_socialinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_social_information"
+                example:handle1="@+id/layout_social_information"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_social_information" >
+
+                <FrameLayout
+                    android:id="@+id/layout_social_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_socialinfo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_socialinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Social Information"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_social_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/social_information" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_otherinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_other_information"
+                example:handle1="@+id/layout_other_information"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_other_information" >
+
+                <FrameLayout
+                    android:id="@+id/layout_other_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_otherinfo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_otherinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Other Information"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_other_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/other_information" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/expand_orderinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                example:animationDuration="100"
+                example:content1="@+id/layout_content_order_information"
+                example:handle1="@+id/layout_order_information"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/layout_content_order_information" >
+
+                <FrameLayout
+                    android:id="@+id/layout_order_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_selector_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/img_orderinfo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:focusable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_green" />
+
+                    <TextView
+                        android:id="@+id/txt_orderinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="Order Information"
+                        android:textColor="@color/scanattendee_dark_color"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_content_order_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/order_information" />
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/frame_transparentbadge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha=".2"
+        android:background="#000000"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <FrameLayout
+            android:id="@+id/frame_attdetailqrcodebadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:visibility="visible" >
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

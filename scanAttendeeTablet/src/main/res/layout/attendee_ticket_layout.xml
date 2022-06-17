@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp" >
+
+        <TextView
+            android:id="@+id/attTicketName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="190dp"
+          
+            android:singleLine="false"
+            android:paddingRight="5dp"
+            
+            
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/font_small" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="195dp"
+            android:background="@color/header_stroke" >
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/attTicketQty"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="170dp"
+           android:textColor="@color/gray_color"
+             android:text="1"
+            android:textSize="@dimen/font_small" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="168dp"
+            android:background="@color/header_stroke" >
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/attTicketPrice"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:gravity="center"
+            android:layout_marginRight="95dp"
+            android:textColor="@color/gray_color"
+             android:text="$500.00"
+            android:textSize="@dimen/font_small" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="90dp"
+            android:background="@color/header_stroke" >
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/attTicketStatus"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right|center_horizontal"
+             android:layout_marginRight="50dp"
+           android:text="Paid"
+           android:textColor="@color/gray_color"
+            android:textSize="@dimen/font_small" />
+        
+         <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="45dp"
+            android:background="@color/header_stroke" >
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/attTicketfee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right|center_horizontal"
+              android:layout_marginRight="5dp"
+           android:text="Fee"
+           android:textColor="@color/gray_color"
+            android:textSize="@dimen/font_small" />
+        
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_stroke" >
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // changed green_flat_color ,green_button_color
+    <color name="green_color">#116162</color>
+    <color name="green_connected">#57D702</color>
+
+    <color name="pressed_color">#DADCDF</color>
+    <color name="header_stroke">#D2D2D2</color>
+    <color name="footer_stroke">#348383</color>
+    <color name="white_shadow">#ecf0f1</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_gray">#F1F1F1</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="red">#FD041C</color>
+    <color name="setting_bg1">#5E5F5F</color>
+    <color name="setting_bg">#303030</color>
+    <color name="setting_line">#2B2B2B</color>
+    <color name="buttob_bg_focus">#676767</color>
+    <color name="buttob_bg_normal">#CBCBCB</color>
+    <color name="green_cart_bg">#3D947A</color>
+    <color name="darl_gray_text_color">#676767</color>
+    <color name="b_transparent">#95000000</color>
+    <color name="b1_transparent">#44000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="ticket_tab_color">#2B2B2B</color>
+    <color name="screen_bg_color">#ebeaea</color>
+    <color name="textcolor">#858585</color>
+    <color name="splash_bg_color">#2c4e4f</color>
+    <color name="green_top_header">#DDDDDD</color>
+   	<!--<color name="green_flat_color">#116162</color>-->
+    <color name="green_flat_color">#617E8C</color>
+
+    <color name="image_focus_color">#333333</color>
+    <color name="payrelate_ligt_blue">#438bca</color>
+    <color name="black">#000000</color>
+    <color name="black_faded">#3E4541</color>
+    <color name="orange_bg">#DF6B1E</color>
+    <color name="red_offline">#c0392b</color>
+    <color name="light_blue">#4682A1</color>
+    <color name="gray_color">#8D8D8D</color>
+    <color name="watermark_color">#D5D2D2</color>
+    <color name="gray_selector_color">#E3E2E5</color>
+    <color name="popup_header">#F0F0F2</color>
+    <color name="popup_header_text_color">#787878</color>
+    <color name="edittext_line_color">#C0C0C0</color>
+<!--<color name="green_button_color">#116162</color>-->
+    <color name="green_button_color">#617E8C</color>
+    <color name="scanattendee_icons_color">#617E8C</color>
+    <color name="scanattendee_dark_color">#597482</color>
+    <color name="popup_transparent">#50000000</color>
+    <color name="error_bg">#D64541</color>
+    <color name="line_color">#AEAEAE</color>
+    <color name="order_tab_color">#BFC6CC</color>
+    <color name="order_line_color">#D5D9DD</color>
+
+    <item name="forgot_pswd_normal" type="color">@color/black</item>
+    <item name="forgot_pswd_pressed" type="color">@color/green_button_color</item>
+    <item name="save_text_normal" type="color">@color/green_button_color</item>
+    <item name="save_text_pressed" type="color">@color/orange_bg</item>
+    <item name="error_okey_normal" type="color">@color/white</item>
+    <item name="error_okey_pressed" type="color">@color/pressed_color</item>
+
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#238787</color>
+    <color name="counter_text_color">#238787</color>
+    <color name="event_date_blue_bg">#CC4bbfe5</color>
+    <color name="event_date_green_bg">#348383</color>
+    <color name="event_date_green_bg1">#CC00b49b</color>
+    <color name="event_date_red_bg">#CCfd6f5b</color>
+    <color name="event_date_green__dark_bg">#3EA57A</color>
+    <color name="event_date_red_dark_bg">#E17A67</color>
+    <color name="img_transparent">#60000000</color>
+    <color name="blue_text_color">#2F87A8</color>
+    <color name="paid_t_color">#C5530C</color>
+    <color name="donation_t_color">#F4B251</color>
+    <color name="free_t_color">#90C695</color>
+    <color name="cash_color">#E86026</color>
+    <color name="credit_color">#EDAF06</color>
+    <color name="check_color">#329DBD</color>
+    <color name="free_color">#E7D283</color>
+    <color name="guest_color">#ECCA68</color>
+    <color name="socia_lay_bg">#B4B4B4</color>
+    <color name="fb_color">#3C5B9B</color>
+    <color name="linkedin_color">#3997AC</color>
+    <color name="twitter_color">#40CDD7</color>
+    <color name="share_social_color">#2626D0</color>
+    <color name="light_green">#91c46c</color>
+    <color name="appbackground">#FFF</color>
+    <color name="light_hash_new">#EFEFF4</color>
+
+
+    //citrus colors
+    <color name="primary">#7AA4D5</color>
+    <color name="primary_dark">#165E8B</color>
+    <color name="accent">#7AA4D5</color>
+
+    <color name="persian_green_primary">#0DAC8F</color>
+    <color name="persian_green_dark">#0A927A</color>
+    <color name="persian_green_accent">#0A927A</color>
+    <color name="pink_primary">#EB1E63</color>
+    <color name="pink_dark">#C0175C</color>
+    <color name="pink_accent">#C0175C</color>
+    <color name="royal_blue_primary">#4C63E2</color>
+    <color name="royal_blue_dark">#4055BF</color>
+    <color name="royal_blue_accent">#4055BF</color>
+    <color name="purple_primary">#9C28B1</color>
+    <color name="purple_dark">#7A1FA2</color>
+    <color name="purple_accent">#7A1FA2</color>
+
+</resources>

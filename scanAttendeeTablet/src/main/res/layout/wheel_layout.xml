@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/header_stroke"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/screen_bg_color" >
+
+        <Button
+            android:id="@+id/taxcancel"
+            android:layout_width="85dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical|left"
+            android:background="@drawable/text_btn_effect"
+            android:text="Cancel"
+            android:textColor="@color/orange_bg"
+            android:textSize="@dimen/font_normal" />
+
+        <Button
+            android:id="@+id/taxdone"
+            android:layout_width="85dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/text_btn_effect"
+            android:text="Done"
+            android:textColor="@color/green_button_color"
+            android:textSize="@dimen/font_normal" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <NumberPicker
+            android:id="@+id/numberPicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_centerInParent="true" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:paddingBottom="18dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="18dp"
+            android:text="."
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:paddingBottom="18dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="18dp"
+            android:text="%"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+</LinearLayout>

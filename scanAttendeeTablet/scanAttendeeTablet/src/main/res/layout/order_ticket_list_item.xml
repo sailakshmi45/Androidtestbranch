@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/txt_OT_ticket_name"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="Item"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/light_blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_OT_ticket_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="140dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Price"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/light_blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_OT_ticket_oty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="110dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Qty"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/light_blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_OT_ticket_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="28dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Total Price"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/light_blue"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_order_item_cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/delete_attendee"
+            android:textColor="@color/red" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+      android:background="@color/pressed_color"
+    android:paddingLeft="0dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:gravity="center_horizontal"
+        android:text="Ticket"
+        android:textColor="#000"
+        android:textSize="9sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/lin02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/title"
+        android:layout_centerHorizontal="true"
+       
+        android:gravity="bottom|center" >
+
+        <TextView
+            android:id="@+id/colortext02"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/colortext01"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/blue_shadow_border"
+            android:gravity="center"
+            android:text="0%"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <!--
+             <TextView
+            android:id="@+id/colortext02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_toRightOf="@+id/colortext01"
+            android:background="#FF9A39"
+            android:gravity="bottom"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:visibility="gone" />
+        -->
+
+        <TextView
+            android:id="@+id/text01"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_above="@+id/colortext01"
+            android:layout_centerHorizontal="true"
+            android:text="0/0"
+            android:textColor="@color/darl_gray_text_color"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <!--
+             <TextView
+            android:id="@+id/text02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_above="@+id/colortext02"
+            android:layout_toRightOf="@+id/colortext01"
+            android:textColor="#000"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+        -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/addguest"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

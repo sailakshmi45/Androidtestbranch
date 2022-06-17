@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shadow_border"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtsortby"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="FILTER BY"
+            android:textColor="@color/green_button_color"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/green_button_color" />
+
+        <TextView
+            android:id="@+id/txt_filter_cash"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="CASH"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/txt_filter_check"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="CHECK"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal" />
+
+        <FrameLayout
+            android:id="@+id/line4"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/txt_filter_creditcard"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="CREDIT CARD"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal"
+             />
+
+        <FrameLayout
+            android:id="@+id/line4"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/txt_filter_paypal"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="PAYPAL"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/line5"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_filter_stripe"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="STRIPE"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/line6"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_filter_authnet"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="AUTHORIZE.NET"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/line7"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_filter_tcommerce"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="TRUST COMMERCE"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/line8"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_filter_free"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="FREE PAY"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal" />
+
+        <FrameLayout
+            android:id="@+id/line8"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/txt_filter_extPay"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="EXTERNAL PAY GATEWAY"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/txt_filter_paid"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="PAID"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_filter_notPaid"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="NOT PAID"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal"
+            android:visibility="visible" />
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_filter_cancelled"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="CANCELLED"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_filter_all"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/text_btn_effect"
+            android:gravity="center"
+            android:text="ALL"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_filter_cancle"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="CANCEL"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+</LinearLayout>

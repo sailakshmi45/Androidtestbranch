@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/text_button_selector"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:drawableLeft="@drawable/ticket_icon"
+            android:drawablePadding="8dp"
+            android:text="Ticket Name: "
+            android:textColor="@color/scanattendee_icons_color"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spnr_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="20dp"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:text="--Select--"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/full_layout">
+
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/settingoption"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <!--   <ImageView
+                           android:id="@+id/imgaddattendeepic"
+                           android:layout_width="90dp"
+                           android:layout_height="90dp"
+                           android:background="@drawable/image_border"
+                           android:scaleType="fitXY"
+                           android:layout_margin="10dp"
+                           android:layout_gravity="center"
+                           android:src="@drawable/default_image" />-->
+                    <EditText
+                        android:id="@+id/edt_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/user_name_icon"
+                        android:drawablePadding="8dp"
+                        android:gravity="left|center_vertical"
+                        android:hint="First Name (Required)"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dp" >
+
+                        <requestFocus android:layout_width="wrap_content" />
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/edt_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/user_name_icon"
+                        android:drawablePadding="8dp"
+                        android:gravity="left|center_vertical"
+                        android:hint="Last Name (Required)"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dp" />
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/email_icon"
+                        android:drawablePadding="8dp"
+                        android:hint="Email Id (Required)"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="10dp" />
+
+                    <EditText
+                        android:id="@+id/edt_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/company_icon"
+                        android:drawablePadding="8dp"
+                        android:hint="Company"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dp" />
+
+                    <!--<com.globalnest.patternedEditText.PatternedEditText
+                        xmlns:pet="http://schemas.android.com/apk/res-auto"
+                        pet:pattern="(###) ###-####"-->
+                    <EditText
+                        android:id="@+id/edt_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:digits="0123456789 ()-"
+                        android:drawableLeft="@drawable/phone_gray_icon"
+                        android:drawablePadding="8dp"
+                        android:gravity="left|center_vertical"
+                        android:hint="Mobile"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/frame_barcode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal" >
+
+                        <EditText
+                            android:id="@+id/edt_custom_barcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/intractive_edit_text"
+                            android:drawableLeft="@drawable/barcode"
+                            android:drawablePadding="8dp"
+                            android:gravity="left|center_vertical"
+                            android:hint="Custom Barcode (Required)"
+                            android:inputType="textCapWords"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/btn_barcode"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/barcode" />
+                    </FrameLayout>
+
+                    <EditText
+                        android:id="@+id/edt_designation"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/user_name_icon"
+                        android:drawablePadding="8dp"
+                        android:gravity="left|center_vertical"
+                        android:hint="Job Title"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+                    <EditText
+                        android:id="@+id/edt_badge_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/badge_icon"
+                        android:drawablePadding="8dp"
+                        android:gravity="left|center_vertical"
+                        android:hint="Badge Label"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <EditText
+                        android:id="@+id/edt_seat_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/seaticon"
+                        android:drawablePadding="8dp"
+                        android:gravity="left|center_vertical"
+                        android:hint="Seat Number"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+                    <EditText
+                        android:id="@+id/edt_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/note"
+                        android:ems="10"
+                        android:gravity="top|left"
+                        android:hint="Notes"
+                        android:inputType="textMultiLine"
+                        android:lines="6"
+                        android:maxLength="256"
+                        android:maxLines="6"
+                        android:minLines="5"
+                        android:padding="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/selfcheckin_layout"
+        android:layout_marginTop="10dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imgaddattendeepic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/image_border"
+                    android:scaleType="fitXY"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/default_image" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FIRST NAME"
+                        android:textColor="@color/darl_gray_text_color"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        />
+                    <EditText
+                        android:id="@+id/self_edt_first_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="bottom"
+                        android:textSize="24dp"
+                        android:gravity="left|center"
+                        android:background="@color/white"
+                        android:hint="First Name"
+                        android:inputType="textCapSentences"
+                        />
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:background="@color/gray_color"
+                        android:layout_marginBottom="20dp">
+
+                    </View>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LAST NAME"
+                        android:textColor="@color/darl_gray_text_color"
+                        android:textSize="12dp"
+                        android:gravity="left"/>
+
+                    <EditText
+                        android:id="@+id/self_edt_last_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="bottom"
+                        android:textSize="24dp"
+                        android:gravity="left|center"
+                        android:background="@color/white"
+                        android:hint="Last Name"
+                        android:inputType="textCapSentences"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:background="@color/gray_color"
+                        android:layout_marginBottom="20dp">
+
+                    </View>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COMPANY"
+                        android:textColor="@color/darl_gray_text_color"
+                        android:textSize="12dp"
+                        android:gravity="left"/>
+                    <EditText
+                        android:id="@+id/self_edt_company"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="bottom"
+                        android:textSize="24dp"
+                        android:gravity="left|center"
+                        android:background="@color/white"
+                        android:hint="Company"
+                        android:inputType="textCapSentences"
+
+                        />
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:background="@color/gray_color"
+                        android:layout_marginBottom="20dp">
+
+                    </View>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EMAIL ID"
+                        android:textColor="@color/darl_gray_text_color"
+                        android:textSize="12dp"
+                        android:gravity="left"/>
+
+                    <EditText
+                        android:id="@+id/self_edt_email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="bottom"
+                        android:textSize="24dp"
+                        android:gravity="left|center"
+                        android:background="@color/white"
+                        android:hint="Email Id"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:background="@color/gray_color"
+                        android:layout_marginBottom="20dp">
+
+                    </View>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHONE NUMBER"
+                        android:textColor="@color/darl_gray_text_color"
+                        android:textSize="12dp"
+                        android:gravity="left"/>
+                    <EditText
+                        android:id="@+id/self_edt_mobile"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="bottom"
+                        android:textSize="24dp"
+                        android:gravity="left|center"
+                        android:background="@color/white"
+                        android:hint="Phone Number"
+                        android:inputType="number"
+                        android:digits="0123456789 ()-"
+                        />
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:background="@color/gray_color"
+                        android:layout_marginBottom="20dp">
+
+                    </View>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/frame_transparentbadge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha=".2"
+        android:background="#000000"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <FrameLayout
+            android:id="@+id/frame_attdetailqrcodebadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:visibility="visible" >
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

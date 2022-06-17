@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:example="http://schemas.android.com/apk/res/com.globalnest.scanattendee"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="top"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/card_layout"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_form_previous"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/orange_button"
+            android:text="PREVIOUS"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_form_next"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/blue_button"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/formscrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="70dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="70dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green_button_color"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/txt_form_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Buyer Info"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/btn_copy"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/copy_img" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_border"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:background="@drawable/shadow_border"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imgattendeepic"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/image_border"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:src="@drawable/default_image" />
+                </LinearLayout>
+                <!-- <TextView
+                     android:id="@+id/txtaddattendeepic"
+                     android:layout_width="80dp"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:gravity="center"
+                     android:paddingTop="2dp"
+                     android:text="Add Photo"
+
+                     android:textColor="@color/setting_bg1"
+                     android:textSize="@dimen/font_normal" />-->
+
+                <EditText
+                    android:id="@+id/edt_form_fname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:drawableLeft="@drawable/user_name_icon"
+                    android:drawablePadding="8dp"
+                    android:hint="Enter First Name"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="10dp"
+                    android:drawableRight="@drawable/searchclear"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edt_form_lname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:drawableLeft="@drawable/user_name_icon"
+                    android:drawablePadding="8dp"
+                    android:hint="Enter Last Name"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="10dp"
+                    android:drawableRight="@drawable/searchclear"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edt_form_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:drawableLeft="@drawable/email_icon"
+                    android:drawablePadding="8dp"
+                    android:hint="Enter Email"
+                    android:padding="10dp"
+                    android:drawableRight="@drawable/searchclear"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edt_form_company"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:drawableLeft="@drawable/company_icon"
+                    android:drawablePadding="8dp"
+                    android:hint="Enter Company(Optional)"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="10dp"
+                    android:drawableRight="@drawable/searchclear"
+                    android:singleLine="true" />
+
+                <!--<com.globalnest.patternedEditText.PatternedEditText
+                    pet:pattern="(###) ###-####"
+                    xmlns:pet="http://schemas.android.com/apk/res-auto"-->
+                <EditText
+                    android:id="@+id/edt_att_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:digits="0123456789 ()-"
+                    android:drawableLeft="@drawable/phone_gray_icon"
+                    android:drawablePadding="8dp"
+                    android:hint="Phone no.(Optional)"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:drawableRight="@drawable/searchclear"
+                    android:padding="10dp"
+                    />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/frame_barcode"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/edt_form_custombarcode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/intractive_edit_text"
+                        android:drawableLeft="@drawable/barcode"
+                        android:drawableRight="@drawable/searchclear"
+                        android:drawablePadding="8dp"
+                        android:hint="Enter Barcode (Unique ID)"
+                        android:inputType="textCapSentences"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:layout_marginRight="35dp"/>
+
+                    <Button
+                        android:id="@+id/btn_barcode"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/barcode" />
+                </FrameLayout>
+
+                <com.globalnest.scanattendee.ExpandablePanel
+                    android:id="@+id/expand_panel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    example:animationDuration="500"
+                    example:content1="@+id/settingoption"
+                    example:handle1="@+id/ticketdefaultsetting"
+                    example:isviewgroup="true"
+                    example:viewgroup="@+id/settingoption" >
+
+                    <FrameLayout
+                        android:id="@+id/ticketdefaultsetting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="top"
+                        android:background="@drawable/text_button_selector" >
+
+                        <TextView
+                            android:id="@+id/txt_badge_info"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:drawableRight="@drawable/plus_small"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="More"
+                            android:textColor="@color/green_button_color"
+                            android:textSize="@dimen/font_title" />
+
+                        <Button
+                            android:id="@+id/imgexpand"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/plus_small"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/settingoption"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/edt_att_designation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/intractive_edit_text"
+                            android:drawableLeft="@drawable/company_icon"
+                            android:drawablePadding="8dp"
+                            android:hint="Job Title"
+                            android:inputType="textCapWords"
+                            android:drawableRight="@drawable/searchclear"
+                            android:padding="10dp" >
+
+                            <requestFocus android:layout_width="wrap_content" />
+                        </EditText>
+
+                        <!--
+                             <EditText
+                            android:id="@+id/edt_att_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/intractive_edit_text"
+                            android:hint="Phone no."
+                            android:inputType="phone"
+                            android:maxLength="14"
+                            android:padding="10dp" />
+
+
+
+                        -->
+
+                        <EditText
+                            android:id="@+id/edt_att_badge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/intractive_edit_text"
+                            android:drawableLeft="@drawable/badge_icon"
+                            android:drawablePadding="8dp"
+                            android:hint="Badge Label"
+                            android:inputType="textEmailAddress"
+                            android:drawableRight="@drawable/searchclear"
+                            android:padding="10dp" />
+
+                        <EditText
+                            android:id="@+id/edt_att_tag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/intractive_edit_text"
+                            android:drawableLeft="@drawable/tag_icon"
+                            android:drawablePadding="8dp"
+                            android:hint="Tag"
+                            android:inputType="textCapWords"
+                            android:padding="8dp"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/edt_att_seatno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/intractive_edit_text"
+                            android:drawableLeft="@drawable/seat"
+                            android:drawablePadding="8dp"
+                            android:hint="Seat No"
+                            android:inputType="textCapWords"
+                            android:drawableRight="@drawable/searchclear"
+                            android:padding="10dp" />
+
+                        <EditText
+                            android:id="@+id/edt_attreg_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/intractive_edit_text"
+                            android:drawableLeft="@drawable/note"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:hint="Note"
+                            android:inputType="textMultiLine"
+                            android:lines="6"
+                            android:maxLength="256"
+                            android:maxLines="6"
+                            android:minLines="5"
+                            android:padding="10dp"
+                            android:drawableRight="@drawable/searchclear"/>
+                    </LinearLayout>
+                </com.globalnest.scanattendee.ExpandablePanel>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,342 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
+
+
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:hint">@color/textcolor</item>
+        <item name="android:listSeparatorTextViewStyle">@style/MyOwnListSeperatorTextViewStyle</item>
+
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+
+
+
+
+
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Widget.TextView.ListSeparator" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MyOwnListSeperatorTextViewStyle" parent="Widget.TextView.ListSeparator">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">#cccccc</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">12dp</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <style name="DialogLeftAnimation">
+        <item name="android:windowEnterAnimation">@anim/pull_in_from_left</item>
+        <item name="android:windowExitAnimation">@anim/pull_out_from_left</item>
+    </style>
+
+    <style name="DialogLeftSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogLeftAnimation</item>
+    </style>
+
+    <style name="DialogRightAnimation">
+        <item name="android:windowEnterAnimation">@anim/pull_out_from_left</item>
+        <item name="android:windowExitAnimation">@anim/pull_in_from_left</item>
+    </style>
+
+    <style name="DialogRightSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogRightAnimation</item>
+    </style>
+
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_top_slide</item>
+        <item name="android:windowExitAnimation">@anim/popup_hide_slide</item>
+    </style>
+
+    <style name="PopupSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/PopupAnimation</item>
+    </style>
+
+    <style name="MyListFrontContent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/shadow_border</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="CSVTextViewHeaderStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@drawable/colum_cell_shape</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/green_button_color</item>
+        <item name="android:textSize">@dimen/font_title</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    //for float text
+    <style name="FloatLabel.Label" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@color/gray_color</item> //#90A4AE
+        <item name="android:textSize">14dp</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="MyTextView" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+
+    <style name="CSVTextViewFieldStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@drawable/colum_cell_shape</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="MyEditText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/edit_text_shadow</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:textColor">@color/gray_color</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="MyEditText1">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/line_effect</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:textColor">@color/gray_color</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+    <style name="DialogBottomAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottm_down</item>
+    </style>
+
+    <style name="DialogBottomSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogBottomAnimation</item>
+    </style>
+
+    <style name="StyleEdit" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="CustomForDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowFrame">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="SwitchTextAppearance" parent="@android:style/Widget.Holo.Button"></style>
+    <!-- tab view style -->
+    <style name="text_title">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="progressColor" format="color" />
+        <attr name="progressText" format="string" />
+        <attr name="progressTextColor" format="color" />
+        <attr name="progressTextFont" format="string" />
+        <attr name="progressTextSize" format="integer" />
+        <attr name="borderOffset" format="integer" />
+        <attr name="fadeTime" format="integer" />
+    </declare-styleable>
+
+    <!-- Defines the custom XML attributes supported for a HorizontalListView -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <style name="MyCustomTheme" parent="@android:style/Theme.Dialog">
+       <item name="android:windowFrame">@null</item>
+       <item name="android:windowIsFloating">true</item>
+      <!-- <item name="android:windowIsTranslucent">true</item>-->
+       <item name="android:windowNoTitle">true</item>
+       <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+   </style>
+
+   <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+       <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+       <item name="android:windowExitAnimation">@anim/zoom_out</item>
+   </style>
+   
+   <style name="MyTresperant" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+       <item name="android:windowFrame">@null</item>
+       <item name="android:windowIsFloating">true</item>
+      <!-- <item name="android:windowIsTranslucent">true</item>-->
+       <item name="android:windowNoTitle">true</item>
+       <item name="android:windowBackground">@color/transparent</item>
+       <item name="android:windowContentOverlay">@null</item>
+   </style>
+    // citrus styles
+    <!--<style name="AppTheme.Base" parent="CitrusAppTheme">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorButtonNormal">@color/primary</item>
+    </style>
+
+    <style name="AppTheme.Green" parent="CitrusAppTheme">
+        <item name="colorPrimary">@color/green_button_color</item>
+        <item name="colorPrimaryDark">@color/green_button_color</item>
+        <item name="colorAccent">@color/green_button_color</item>
+        <item name="colorButtonNormal">@color/green_button_color</item>
+        <item name="alertDialogTheme">@style/AlertDialogStyle_pink</item>
+    </style>
+
+
+    <style name="AlertDialogStyle_green" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/persian_green_accent</item>
+        <item name="android:textColorPrimary">@color/citrus_text_color</item>
+    </style>
+
+    <style name="AppTheme.pink" parent="CitrusAppTheme">
+        <item name="colorPrimary">@color/pink_primary</item>
+        <item name="colorPrimaryDark">@color/pink_dark</item>
+        <item name="colorAccent">@color/pink_accent</item>
+        <item name="colorButtonNormal">@color/pink_primary</item>
+        <item name="alertDialogTheme">@style/AlertDialogStyle_pink</item>
+    </style>
+
+
+    <style name="AlertDialogStyle_pink" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/pink_accent</item>
+        <item name="android:textColorPrimary">@color/citrus_text_color</item>
+    </style>
+
+    <style name="AppTheme.blue" parent="CitrusAppTheme">
+        <item name="colorPrimary">@color/royal_blue_primary</item>
+        <item name="colorPrimaryDark">@color/royal_blue_dark</item>
+        <item name="colorAccent">@color/royal_blue_accent</item>
+        <item name="colorButtonNormal">@color/royal_blue_primary</item><item name="alertDialogTheme">@style/AlertDialogStyle_blue</item>
+    </style>
+
+
+    <style name="AlertDialogStyle_blue" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/royal_blue_accent</item>
+        <item name="android:textColorPrimary">@color/citrus_text_color</item>
+    </style>
+    <style name="Base.V11.Theme.AppCompat.Dialog" parent="Base.V7.Theme.AppCompat.Dialog">
+        <item name="android:buttonBarStyle">@style/Widget.AppCompat.ButtonBar.AlertDialog</item>
+        <item name="android:borderlessButtonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+    </style>
+    <style name="AppTheme.purple" parent="CitrusAppTheme">
+        <item name="colorPrimary">@color/purple_primary</item>
+        <item name="colorPrimaryDark">@color/purple_dark</item>
+        <item name="colorAccent">@color/purple_accent</item>
+        <item name="colorButtonNormal">@color/purple_primary</item>
+        <item name="alertDialogTheme">@style/AlertDialogStyle_purple</item>
+    </style>
+
+
+    <style name="AlertDialogStyle_purple" parent="CitrusAppTheme">
+        <item name="colorAccent">@color/purple_accent</item>
+        <item name="android:textColorPrimary">@color/citrus_text_color</item>
+    </style>-->
+   
+  ------------------------------------
+
+
+
+
+    <!-- Application theme. -->
+
+
+    <style name="Dialog_No_Border" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="MyCustomThemeG" parent="@android:style/Theme.Translucent">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+       <!-- <item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+    </style>
+
+   <!-- <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out</item>
+    </style>-->
+
+    <style name="Theme_MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:textColor">@color/white_shadow</item>
+        <item name="android:background">@color/green_flat_color</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+        <!-- Base application theme. -->
+        <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+            <item name="android:fastScrollTrackDrawable">@drawable/thumb</item>
+            <item name="android:fastScrollThumbDrawable">@drawable/fast_scrollbar</item>
+
+        </style>
+
+</resources>

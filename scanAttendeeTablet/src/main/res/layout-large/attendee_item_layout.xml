@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="7dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:tag="back" >
+
+        <RelativeLayout
+            android:id="@+id/checkin_layout"
+            android:layout_width="130dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/checkin_bg_border"
+            android:focusable="false"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_att_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Check In"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_header" />
+
+            <ProgressBar
+                android:id="@+id/checkinprogress"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_att_checkin"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/deletelayout"
+            android:layout_width="130dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete_bg_border"
+            android:focusable="false"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_att_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_header" />
+
+            <ProgressBar
+                android:id="@+id/deleteprogress"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_att_delete"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        style="@style/MyListFrontContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="front"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_effect"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="0dp" >
+
+                <FrameLayout
+                    android:id="@+id/date_layout"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" >
+                    <FrameLayout
+                        android:id="@+id/statusbar"
+                        android:layout_width="4dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/black"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/txt_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="#D8D8D8"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:maxLines="2"
+                        android:text="AA"
+                        android:visibility="visible"
+                        android:textColor="@color/blue_text_color"
+                        android:textSize="@dimen/font_tablet_big" >
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/attendee_img"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/image_border"
+                        android:scaleType="fitXY"
+                        android:visibility="gone"
+                        android:adjustViewBounds="false" />
+
+                    <!--
+                    <TextView
+                        android:id="@+id/txtcheckin_year"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="2014 "
+                        android:padding="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+                    <TextView
+                        android:id="@+id/txtcheckin_day_month"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                         android:padding="2dp"
+                        android:text="Nov 10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_header" />
+
+                    <TextView
+                        android:id="@+id/txtcheckindate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="63dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                         android:padding="2dp"
+                        android:text="6.55 AM"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_verysmall" />
+
+
+
+
+
+
+
+
+
+
+
+
+                    -->
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkinlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal" >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp" >
+
+                        <Button
+                            android:id="@+id/btncheckin"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="right|center"
+                            android:background="@drawable/red_price_bg"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:text="0/1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_title"
+                            android:visibility="gone"/>
+                        <CheckBox
+                            android:id="@+id/check_print"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="right|center"
+                            android:gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:button="@drawable/checkbox_square"
+                            android:padding="5dp"
+                            android:focusable="false"
+
+                            />
+                        <ProgressBar
+                            android:id="@+id/checkinprogress_front"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="right|center"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:indeterminateDrawable="@drawable/progress_bar_rotation"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/attendeelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:layout_toLeftOf="@+id/checkinlayout"
+                    android:layout_toEndOf="@+id/date_layout"
+                    android:layout_toRightOf="@+id/date_layout"
+                    android:gravity="center_vertical|center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/txtattname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="left"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:id="@+id/txtattcomp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="left"
+                        android:maxLines="2"
+                        android:text="Google Inc."
+                        android:textColor="@color/darl_gray_text_color"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtseatnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginRight="20dp"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Seat No:"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_rsvpheading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="RSVP Status: "
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_small"
+                                android:textStyle="italic"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txtrsvpstatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text=""
+                                android:textColor="@color/orange_bg"
+                                android:textSize="12dp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                        <!-- <TextView
+                             android:id="@+id/txtrsvpstatus"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="3dp"
+                             android:gravity="left"
+                             android:maxLines="1"
+                             android:text="RSVP Status:"
+                             android:textColor="@color/black"
+                             android:visibility="gone"
+                             android:textStyle="italic"
+                             android:textSize="@dimen/font_small"
+                             android:layout_weight="1"/>-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left">
+
+                        <TextView
+                            android:id="@+id/txt_badgeheading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Badge Status: "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small"
+                            android:textStyle="italic"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txtbadgeprintstatus"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@color/orange_bg"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtcheckindate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="Nov 10, 2014 6.55 AM"
+                        android:textColor="@color/blue_text_color"
+                        android:textSize="@dimen/font_small"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/line"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/attendeelayout"
+                android:layout_marginTop="2dp"
+                android:background="@color/screen_bg_color" />
+
+            <LinearLayout
+                android:id="@+id/frame_tickettype"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txttickettype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:paddingLeft="5dp"
+                    android:text="TKT-388956-Movie Balcony"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_small" />
+
+                <FrameLayout
+                    android:id="@+id/frame_vertical_line"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:background="@color/b1_transparent" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="5" >
+
+                    <ImageView
+                        android:id="@+id/img_attendee_delete"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/delete_attendee"
+                        android:visibility="visible" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!--//<solid android:color="#21ab29" />-->
+    //<solid android:color="@color/event_date_green__dark_bg" />
+
+    <corners android:radius="20dp" />
+
+
+</shape>

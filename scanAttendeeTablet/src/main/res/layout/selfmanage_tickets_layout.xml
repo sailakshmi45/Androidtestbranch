@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/lay_selfpromocode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center|top"
+        android:visibility="gone"
+        >
+        <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_weight="0.7"
+            app:floatingHintTextAppearance="@style/FloatLabel.Label">
+
+            <EditText
+                android:id="@+id/edt_promocode"
+                style="@style/MyTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray_color"
+                android:gravity="left|center"
+                android:hint="Have a Promotional Code?"
+                android:inputType="textCapWords"
+                android:textSize="14dp"
+                android:typeface="normal"></EditText>
+        </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+        <Button
+            android:id="@+id/btnapplynow"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_gravity="right|center"
+            android:text="APPLY"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:background="@color/darl_gray_text_color"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_appliedpromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textColor="@color/green_connected"/>
+    <TextView
+        android:id="@+id/txtnosearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="No Tickets found!"
+        android:textColor="@color/gray_color"
+        android:textSize="@dimen/font_title"
+        android:visibility="gone" />
+    <ListView
+        android:id="@+id/selfcheckinticketpager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:alwaysDrawnWithCache="false"
+        android:divider="@null"
+        android:scrollingCache="false"
+        android:smoothScrollbar="true"
+        />
+</LinearLayout>

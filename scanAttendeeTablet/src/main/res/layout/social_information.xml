@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_SpeakerImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/SpeakerImage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="SpeakerImage"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/img_SpeakerImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/default_image"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_Company_Logo__c"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/Company_Logo__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Company logo"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/img_Company_Logo__c"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/default_image"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_SpeakerFaceBookId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/SpeakerFaceBookId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Facebook Id"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_SpeakerFaceBookId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_SpeakerLinkedInId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/SpeakerLinkedInId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Linkedin Id"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_SpeakerLinkedInId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_SpeakerTwitterId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/SpeakerTwitterId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Twitter Id"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_SpeakerTwitterId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_SpeakerBlogger"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/SpeakerBlogger"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Blogger Id"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_SpeakerBlogger"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_Biography__c"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/Biography__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Biography"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_Biography__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_WhatsApp__c"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/WhatsApp__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="WhatsApp"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_WhatsApp__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_Wechat__c"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/Wechat__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Wechat"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_Wechat__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_Skype__c"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/Skype__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Skype"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_Skype__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_Snapchat__c"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/Snapchat__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Snapchat"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_Snapchat__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lay_Instagram__c"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/Instagram__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Instagram"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_Instagram__c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intractive_edit_text"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

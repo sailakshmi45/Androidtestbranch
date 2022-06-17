@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!--
+         <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:gravity="center"
+        android:text="Complete Your Action.."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+
+
+
+
+    -->
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="@color/scanattendee_icons_color"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <com.globalnest.classes.RoundedImageView
+            android:id="@+id/img_eventpic"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/default_image" />
+
+        <TextView
+            android:id="@+id/txt_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:text="Event Name"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:src="@drawable/edit_small" />
+
+            <Button
+                android:id="@+id/btn_eventedit"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="3dp"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:text="Edit"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/scanattendee_icons_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:src="@drawable/delete" />
+
+            <Button
+                android:id="@+id/btn_eventdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:text="Delete"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/scanattendee_icons_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:padding="2dp"
+                android:src="@drawable/cross" />
+
+            <Button
+                android:id="@+id/btn_eventcancle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:text="Close"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/scanattendee_icons_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+         <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:background="@color/green_color" />
+
+
+
+
+    -->
+
+</LinearLayout>

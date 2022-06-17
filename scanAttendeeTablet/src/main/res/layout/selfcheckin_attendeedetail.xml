@@ -1,0 +1,2357 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/selfcheckedinlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <FrameLayout
+                android:id="@+id/frm_attendeeimg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/txt_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:background="#D8D8D8"
+                    android:gravity="center"
+                    android:text="AA"
+                    android:textColor="#252525"
+                    android:textSize="50dp"
+                    android:visibility="visible">
+                </TextView>
+
+                <!--   <ImageView
+                       android:id="@+id/attendee_img"
+                       android:layout_width="85dp"
+                       android:layout_height="85dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_gravity="center_vertical"
+                       android:background="@drawable/image_border"
+                       android:scaleType="fitXY"
+                       android:visibility="gone"
+                       android:adjustViewBounds="false" />-->
+
+                <ImageView
+                    android:id="@+id/attendeedetailpic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/image_border"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/default_image"/>
+            </FrameLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Prefix__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Prefix__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prefix"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Prefix__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_First_Name__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/First_Name__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="First Name"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_First_Name__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Last_Name__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Last_Name__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Last_Name__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_Email__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/Email__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Email__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Company_Name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Company_Name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Company_Name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Suffix__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Suffix__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Suffix"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Suffix__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Title__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Title__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Title"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Title__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Phone__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Phone__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Phone__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Work_Phone__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Work_Phone__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work Phone Number"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Work_Phone__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Home_Phone__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Home_Phone__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home Phone Number"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Home_Phone__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Age__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Age__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Age"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Age__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Gender__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Gender__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Gender__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_DOB__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/DOB__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DOB"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_DOB__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="yyyy-mm-dd"
+                    android:background="@drawable/intractive_edit_text"
+                    android:padding="5dp"
+                    android:inputType="textCapWords"
+                    android:digits="123456789-/ "
+                    android:maxLength="10"
+                    android:singleLine="true" />
+                <!--app:dateFormat="yyyy-mm-dd"
+                           app:maxDate="2021-12-31"
+                           app:minDate="1900-01-01"-->
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_Tag_No__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/Tag_No__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seat Number"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Tag_No__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_Badge_Label__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/Badge_Label__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Badge Label"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Badge_Label__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_Badge_Label__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/Badge_Label__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Badge Label"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Badge_Label__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_Note__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/Note__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Note"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Note__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            //work infomation
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/workpart1">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Primary_Business_Category__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Primary_Business_Category__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Primary Business Category"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spn_Primary_Business_Category__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Secondary_Business_Category__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Secondary_Business_Category__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Secondary Business Category"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spn_Secondary_Business_Category__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Number_Of_Employees"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Number_Of_Employees"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No. of Employees"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spn_Number_Of_Employees"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Established_Date__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Established_Date__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Business Established Date"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Established_Date__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="yyyy-mm-dd"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Business_Revenue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Business_Revenue"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Business Revenue"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spn_Business_Revenue"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Tax_Id__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Tax_Id__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Business Tax Id"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+                        <EditText
+                            android:id="@+id/edt_Tax_Id__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Website_URL__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Website_URL__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Website URL"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Website_URL__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Duns_Number__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Duns_Number__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DUNS Number"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Duns_Number__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lay_Blog_URL__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/Blog_URL__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Blog URL"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Blog_URL__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Description__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Description__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Company Overview"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Description__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:padding="5dp"
+                            android:minLines="3"
+                            android:inputType="textMultiLine"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Keywords__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Keywords__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Product/Service Keywords"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Keywords__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:padding="5dp"
+                            android:minLines="3"
+                            android:inputType="textMultiLine"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Exceptional_Keywords__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Exceptional_Keywords__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Exceptional Keywords"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Exceptional_Keywords__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:padding="5dp"
+                            android:minLines="3"
+                            android:inputType="textMultiLine"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_DBA__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/DBA__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DBA"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_DBA__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/workpart2">
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_BBB_Number__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/BBB_Number__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BBB"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_BBB_Number__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_GSA_Schedule__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/GSA_Schedule__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="GSA Schedule Contract Number"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_GSA_Schedule__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Geographical_Region"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Geographical_Region"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Geographical Region"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spn_Geographical_Region"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Ethnicity"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Ethnicity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ethnicity"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spn_Ethnicity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Business_Structure"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Business_Structure"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Business Structure"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spn_Business_Structure"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_CageCode__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/CageCode__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cage Code"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_CageCode__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:maxLength="5"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_distribution_Country__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/distribution_Country__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Distribution Country"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_distribution_Country__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_FaxNumber__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/FaxNumber__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fax Number"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_FaxNumber__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>  <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lay_Manufactures_Country__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:id="@+id/Manufactures_Country__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Manufactures Country"
+                        android:layout_marginBottom="5dp">
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/edt_Manufactures_Country__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/intractive_edit_text"
+                        android:inputType="textCapSentences|textNoSuggestions"
+                        android:padding="5dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Outside_Facilities__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Outside_Facilities__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Outside Facilities"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Outside_Facilities__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_References1__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/References1__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Reference 1"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_References1__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:padding="5dp"
+                            android:minLines="2"
+                            android:inputType="textMultiLine"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_References2__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/References2__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Reference 2"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_References2__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:padding="5dp"
+                            android:minLines="2"
+                            android:inputType="textMultiLine"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_ScopeOfWork1__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/ScopeOfWork1__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Scope of Work1"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_ScopeOfWork1__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:padding="5dp"
+                            android:minLines="2"
+                            android:inputType="textMultiLine"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_ScopeOfWork2__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/ScopeOfWork2__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Scope of Work2"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_ScopeOfWork2__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:padding="5dp"
+                            android:minLines="2"
+                            android:inputType="textMultiLine"
+                            />
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_Secondary_email__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/Secondary_email__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Secondary_email"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/edt_Secondary_email__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textEmailAddress"
+                            android:padding="5dp"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lay_Year_in_business__c"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/Year_in_business__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Years in Business"
+                            android:layout_marginBottom="5dp">
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spn_Year_in_business__c"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/intractive_edit_text"
+                            android:inputType="textCapSentences|textNoSuggestions"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            //workaddress
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_WorkAddress1__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/WorkAddress1__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work Address1"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_WorkAddress1__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_WorkAddress2__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/WorkAddress2__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work Address2"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_WorkAddress2__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Work_City"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Work_City"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work City"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Work_City"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Work_Country"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Work_Country"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work Country"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Work_Country"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Work_State"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Work_State"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work State"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Work_State"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Work_ZipCode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Work_ZipCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work Zipcode"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Work_ZipCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            //home address
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_HomeAddress1__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/HomeAddress1__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home Address1"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_HomeAddress1__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_HomeAddress2__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/HomeAddress2__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home Address2"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_HomeAddress2__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Home_City"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Home_City"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home City"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Home_City"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Home_Country"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Home_Country"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home Country"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Home_Country"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Home_State"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Home_State"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home State"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Home_State"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Home_ZipCode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Home_ZipCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home Zipcode"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Home_ZipCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            //billing address
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_BillingAddress1__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/BillingAddress1__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Billing Address1"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_BillingAddress1__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_BillingAddress2__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/BillingAddress2__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Billing Address2"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_BillingAddress2__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Billing_City"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Billing_City"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Billing City"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Billing_City"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Billing_Country"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Billing_Country"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Billing Country"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Billing_Country"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Billing_State"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Billing_State"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Billing State"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spn_Billing_State"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Billing_ZipCode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Billing_ZipCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Billing Zipcode"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Billing_ZipCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_NAICS_Codes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/label_NAICS_Codes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NAICS Codes"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+                <com.hootsuite.nachos.NachoTextView
+                    android:id="@+id/NAICS_Codes"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:hint="Search to add...."
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:layout_height="fill_parent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_Commodities"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/label_Commodities"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Commodities"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+                <com.hootsuite.nachos.NachoTextView
+                    android:id="@+id/Commodities"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:hint="Search to add...."
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:layout_height="fill_parent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_Diversity_Type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/label_Diversity_Type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diversities"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+                <com.hootsuite.nachos.NachoTextView
+                    android:id="@+id/Diversity_Type"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:hint="Search to add...."
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:layout_height="fill_parent"/>
+            </LinearLayout>
+            //social information
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_SpeakerImage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/SpeakerImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SpeakerImage"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/img_SpeakerImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/default_image"
+                    android:scaleType="centerInside"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Company_Logo__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Company_Logo__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company logo"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/img_Company_Logo__c"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/default_image"
+                    android:scaleType="centerInside"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_SpeakerFaceBookId"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/SpeakerFaceBookId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook Id"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_SpeakerFaceBookId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_SpeakerLinkedInId"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/SpeakerLinkedInId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Linkedin Id"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_SpeakerLinkedInId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_SpeakerTwitterId"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/SpeakerTwitterId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Twitter Id"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_SpeakerTwitterId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_SpeakerBlogger"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/SpeakerBlogger"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blogger Id"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_SpeakerBlogger"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Biography__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Biography__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Biography"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Biography__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_WhatsApp__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/WhatsApp__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WhatsApp"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_WhatsApp__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Wechat__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Wechat__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wechat"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Wechat__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Skype__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Skype__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Skype"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Skype__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Snapchat__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Snapchat__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Snapchat"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Snapchat__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_Instagram__c"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/Instagram__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Instagram"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_Instagram__c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/intractive_edit_text"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FIRST NAME"
+                    android:textColor="#252525"
+                    android:textSize="12dp"
+                    android:gravity="left"
+                    />
+                <EditText
+                    android:id="@+id/s_firstname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="bottom"
+                    android:textSize="30dp"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:hint="First Name"
+                    android:inputType="textCapWords|textNoSuggestions"
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/gray_color"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="8dp"
+                    >
+
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LAST NAME"
+                    android:textColor="#252525"
+                    android:textSize="12dp"
+                    android:gravity="left"/>
+
+                <EditText
+                    android:id="@+id/s_lastname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="bottom"
+                    android:textSize="30dp"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:inputType="textCapWords|textCapSentences|textNoSuggestions"
+                    android:hint="Last Name"
+                    />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/gray_color"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="8dp">
+
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMPANY"
+                    android:textColor="#252525"
+                    android:textSize="12dp"
+                    android:gravity="left"/>
+                <EditText
+                    android:id="@+id/s_company"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="bottom"
+                    android:textSize="30dp"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:inputType="textCapWords|textCapSentences|textNoSuggestions"
+                    android:hint="Company"
+
+
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/gray_color"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="8dp">
+
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TITLE"
+                    android:textColor="#252525"
+                    android:textSize="12dp"
+                    android:gravity="left"/>
+                <EditText
+                    android:id="@+id/s_jobtitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="bottom"
+                    android:textSize="30dp"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:hint="Title"
+                    android:inputType="textCapWords"
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/gray_color"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="8dp">
+
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EMAIL"
+                    android:textColor="#252525"
+                    android:textSize="12dp"
+                    android:gravity="left"/>
+
+                <EditText
+                    android:id="@+id/s_emailid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="bottom"
+                    android:textSize="30dp"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/gray_color"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="8dp">
+
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHONE"
+                    android:textColor="#252525"
+                    android:textSize="12dp"
+                    android:gravity="left"/>
+                <EditText
+                    android:id="@+id/s_phonenumber"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="bottom"
+                    android:textSize="30dp"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:hint="Phone"
+                    android:inputType="number"
+                    android:maxLength="30"
+                    android:digits="0123456789 ()-"
+
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/gray_color"
+                    android:layout_marginBottom="20dp"                     android:layout_marginTop="8dp">
+
+                </View>
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="BADGE LABEL"
+                     android:textColor="#252525"
+                     android:textSize="12dp"
+                     android:gravity="left"/>
+                 <EditText
+                     android:id="@+id/s_badgelabel"
+                     android:layout_width="fill_parent"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="10dp"
+                     android:layout_gravity="bottom"
+                     android:textSize="30dp"
+                     android:gravity="left|center"
+                     android:inputType="textCapWords|textCapSentences|textCapSentences"
+
+                     android:background="@color/white"
+                     android:hint="Badge Label"
+                     />
+                 <View
+                     android:layout_width="fill_parent"
+                     android:layout_height="@dimen/dimen_1dp"
+                     android:background="@color/gray_color"
+                     android:layout_marginBottom="20dp"                     android:layout_marginTop="8dp">
+
+                 </View>-->
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WORK PHONE NUMBER"
+                    android:textColor="#252525"
+                    android:textSize="12dp"
+                    android:gravity="left"/>
+                <EditText
+                    android:id="@+id/s_workphno"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="bottom"
+                    android:textSize="30dp"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:hint="Work Phone Number"
+                    android:inputType="number"
+                    android:maxLength="30"
+                    android:digits="0123456789 ()-"
+
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/gray_color"
+                    android:layout_marginBottom="20dp"                     android:layout_marginTop="8dp">
+                </View>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/frame_transparentbadge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha=".2"
+        android:background="#000000"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <FrameLayout
+            android:id="@+id/frame_attdetailqrcodebadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:visibility="visible" >
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

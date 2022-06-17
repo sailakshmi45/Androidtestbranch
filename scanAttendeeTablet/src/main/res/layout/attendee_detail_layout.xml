@@ -1,0 +1,1150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:example="http://schemas.android.com/apk/res/com.globalnest.scanattendee"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/scrollfulllayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:id="@+id/ticketdefaultsetting"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="top"
+                android:background="@drawable/text_button_selector" >
+
+                <Button
+                    android:id="@+id/imgexpand"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/plus_small"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_info_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Attendee Info"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="20dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/settingoption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="6dp"
+                android:visibility="visible">
+                <ImageView
+                    android:id="@+id/attendeedetailpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/image_border"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/default_image" />
+                <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    app:floatingHintTextAppearance="@style/FloatLabel.Label">
+
+                    <EditText
+                        android:id="@+id/attfname"
+                        style="@style/MyTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/gray_color"
+                        android:gravity="left|center_vertical"
+                        android:hint="First Name"
+                        android:inputType="textCapWords|textNoSuggestions"
+                        android:textSize="18dp"
+                        android:drawableRight="@drawable/searchclear"
+                        android:typeface="normal">
+
+                        <!--
+                                                <requestFocus android:layout_width="wrap_content" />
+                        -->
+                    </EditText>
+                </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                    android:layout_marginTop="5dp"
+                    >
+                    <EditText
+                        android:id="@+id/attlname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="left|center_vertical"
+                        android:hint="Last Name"
+                        android:inputType="textCapWords|textNoSuggestions"
+                        android:layout_marginTop="10dp"
+                        android:drawableRight="@drawable/searchclear"
+                        android:backgroundTint="@color/gray_color"/>
+                </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                    android:layout_marginTop="5dp"
+                    >
+                    <EditText
+                        android:id="@+id/attemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email Id"
+                        android:inputType="textEmailAddress|textNoSuggestions|textFilter"
+                        android:backgroundTint="@color/gray_color"
+                        android:drawableRight="@drawable/searchclear"
+                        />
+                </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                    android:layout_marginTop="5dp"
+                    >
+                    <EditText
+                        android:id="@+id/attcomp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Company"
+                        android:inputType="textCapWords"
+                        android:backgroundTint="@color/gray_color"
+                        android:drawableRight="@drawable/searchclear"
+                        />
+                </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                    android:layout_marginTop="5dp"
+                    >
+                    <EditText
+                        android:id="@+id/attjobtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:hint="Job Title"
+                        android:inputType="textCapWords"
+                        android:backgroundTint="@color/gray_color"
+                        android:drawableRight="@drawable/searchclear"
+                        />
+                </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_barcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="40dp"
+                        >
+
+                        <EditText
+                            android:id="@+id/attCustomBarcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:backgroundTint="@color/gray_color"
+                            android:gravity="left|center_vertical"
+                            android:hint="Custom Barcode"
+                            android:inputType="textCapWords"
+                            android:visibility="visible" />
+                    </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+                    <Button
+                        android:id="@+id/btn_barcode"
+                        android:layout_width="32dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/barcode" />
+                </FrameLayout>
+                <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                    xmlns:pet="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                    android:layout_marginTop="5dp"
+                    android:digits="0123456789 ()-"
+                    android:inputType="number"
+                    >
+                    <!--<com.globalnest.patternedEditText.PatternedEditText
+                        xmlns:pet="http://schemas.android.com/apk/res-auto"
+                        pet:pattern="(###) ###-####"-->
+                    <EditText
+                        android:id="@+id/att_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789 ()-"
+                        android:gravity="left|center_vertical"
+                        android:hint="Mobile"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:drawableRight="@drawable/searchclear"
+                        android:backgroundTint="@color/gray_color"/>
+                </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                    android:id="@+id/homephone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:visibility="visible"
+                    app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                    android:layout_marginTop="5dp"
+                    android:digits="0123456789 ()-"
+                    android:inputType="number"
+                    >
+
+                    <EditText
+                        android:id="@+id/att_home_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789 ()-"
+                        android:gravity="left|center_vertical"
+                        android:hint="Home Phone"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:visibility="visible"
+                        android:drawableRight="@drawable/searchclear"
+                        android:backgroundTint="@color/gray_color"/>
+                </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                    android:id="@+id/workphone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:visibility="visible"
+                    app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                    android:layout_marginTop="5dp"
+                    android:digits="0123456789 ()-"
+                    android:inputType="number"
+                    >
+                    <!--<com.globalnest.patternedEditText.PatternedEditText
+                        xmlns:pet="http://schemas.android.com/apk/res-auto"
+                        pet:pattern="(###) ###-####"-->
+                    <EditText
+                        android:id="@+id/attphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789 ()-"
+                        android:gravity="left|center_vertical"
+                        android:hint="Work Phone"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:visibility="visible"
+                        android:drawableRight="@drawable/searchclear"
+                        android:backgroundTint="@color/gray_color"/>
+                </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+            </LinearLayout>
+            <!-- </com.globalnest.scanattendee.ExpandablePanel> -->
+
+
+            <!-- for Address Fields -->
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/attendee_home_address_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone"
+                example:animationDuration="500"
+                example:content1="@+id/attendee_home_address_content"
+                example:handle1="@+id/frm_home_address_info"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/attendee_home_address_content" >
+
+                <FrameLayout
+                    android:id="@+id/frm_home_address_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/text_button_selector"
+                    android:drawableRight="@drawable/plus_small" >
+
+                    <TextView
+                        android:id="@+id/txt_home_address_header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:drawableRight="@drawable/plus_small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Home Address Info"
+                        android:textColor="@color/green_button_color"
+                        android:textSize="@dimen/font_header" />
+
+                    <Button
+                        android:id="@+id/imgexpand"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/plus_small"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/attendee_home_address_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical" >
+                    <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                        android:layout_marginTop="5dp">
+
+                        <EditText
+                            android:id="@+id/att_home_address1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/address_icon"
+                            android:drawablePadding="8dp"
+                            android:gravity="left|center_vertical"
+                            android:hint="Address1"
+                            android:inputType="textCapWords"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:backgroundTint="@color/gray_color"/>
+                    </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                    <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/att_home_address2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/address_icon"
+                            android:drawablePadding="8dp"
+                            android:gravity="left|center_vertical"
+                            android:hint="Address2"
+                            android:inputType="textCapWords"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:backgroundTint="@color/gray_color"/>
+                    </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/country_icon" />
+
+                        <Spinner
+                            android:id="@+id/att_home_country"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:background="@color/white"
+                            android:imeOptions="actionDone"
+                            android:maxLines="2"
+                            android:text="--None--" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/state_icon" />
+
+                        <Spinner
+                            android:id="@+id/att_home_state"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:background="@color/white"
+                            android:imeOptions="actionDone"
+                            android:maxLines="2"
+                            android:text="--None--" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                            android:layout_marginTop="5dp">
+                            <EditText
+                                android:id="@+id/att_home_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/city_icon"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center_vertical"
+                                android:hint="City"
+                                android:inputType="textCapWords"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/gray_color"/>
+                        </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                    </LinearLayout>
+                    <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/att_home_zipcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/zip_icon"
+                            android:drawablePadding="8dp"
+                            android:gravity="left|center_vertical"
+                            android:hint="Zip Code"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:backgroundTint="@color/gray_color"/>
+                    </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+            <com.globalnest.scanattendee.ExpandablePanel
+                android:id="@+id/attendee_address_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone"
+                example:animationDuration="500"
+                example:content1="@+id/attendee_address_content"
+                example:handle1="@+id/frm_address_info"
+                example:isviewgroup="true"
+                example:viewgroup="@+id/attendee_address_content" >
+
+                <FrameLayout
+                    android:id="@+id/frm_address_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/text_button_selector"
+                    android:drawableRight="@drawable/plus_small" >
+
+                    <TextView
+                        android:id="@+id/txt_address_header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:drawableRight="@drawable/plus_small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Work Address Info"
+                        android:textColor="@color/green_button_color"
+                        android:textSize="@dimen/font_header" />
+
+                    <Button
+                        android:id="@+id/imgexpand"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/plus_small"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/attendee_address_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical" >
+                    <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/att_address1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/address_icon"
+                            android:drawablePadding="8dp"
+                            android:gravity="left|center_vertical"
+                            android:hint="Address1"
+                            android:inputType="textCapWords"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:backgroundTint="@color/gray_color"/>
+                    </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+                    <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/att_address2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/address_icon"
+                            android:drawablePadding="8dp"
+                            android:gravity="left|center_vertical"
+                            android:hint="Address2"
+                            android:inputType="textCapWords"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:backgroundTint="@color/gray_color"/>
+                    </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:orientation="horizontal"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/country_icon" />
+
+                        <Spinner
+                            android:id="@+id/attcountry"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:background="@color/white"
+                            android:imeOptions="actionDone"
+                            android:maxLines="2"
+                            android:text="--None--" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/intractive_edit_text"
+                        android:orientation="horizontal"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/state_icon" />
+
+                        <Spinner
+                            android:id="@+id/attstate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:background="@color/white"
+                            android:imeOptions="actionDone"
+                            android:maxLines="2"
+                            android:text="--None--" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                            android:layout_marginTop="5dp">
+                            <EditText
+                                android:id="@+id/attcity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/city_icon"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center_vertical"
+                                android:hint="City"
+                                android:inputType="textCapWords"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="17dp"
+                                android:backgroundTint="@color/gray_color"/>
+                        </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                    </LinearLayout>
+                    <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/attzipcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/zip_icon"
+                            android:drawablePadding="8dp"
+                            android:gravity="left|center_vertical"
+                            android:hint="Zip Code"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:backgroundTint="@color/gray_color"/>
+                    </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+                </LinearLayout>
+            </com.globalnest.scanattendee.ExpandablePanel>
+
+            <TextView
+                android:id="@+id/txtattcategory"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_button_selector"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="Attendee Category"
+                android:textColor="@color/green_button_color"
+                android:textSize="@dimen/font_header"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/attcategoryvalue"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:enabled="false"
+                android:gravity="left|center_vertical"
+                android:hint="Attendee"
+                android:inputType="textCapWords"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Attendee"
+                android:textColor="@color/light_blue"
+                android:textSize="17dp"
+                android:visibility="gone"
+                android:backgroundTint="@color/gray_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".6"
+                    android:background="@drawable/text_button_selector"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Badge Status"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_header" />
+
+                <TextView
+                    android:id="@+id/txtbadgestatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".4"
+                    android:background="@drawable/text_button_selector"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/orange_bg"
+                    android:textSize="@dimen/font_header" />
+            </LinearLayout>
+            <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                android:layout_marginTop="5dp">
+                <EditText
+                    android:id="@+id/attbadgeLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:hint="Badge Label"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/gray_color"/>
+            </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+
+            <!-- <TextView
+                 android:id="@+id/txtseat"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:text="Seat Number"
+                 android:textColor="@color/green_button_color"
+                 android:textSize="@dimen/font_header" />-->
+            <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                android:layout_marginTop="5dp">
+                <EditText
+                    android:id="@+id/seatvalue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:hint="Seat no."
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/gray_color"/>
+            </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+            <EditText
+                android:id="@+id/atttag"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/intractive_edit_text"
+                android:gravity="left|center_vertical"
+                android:hint="Tag"
+                android:inputType="textCapWords|textMultiLine"
+                android:minHeight="35dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:visibility="gone"
+                android:backgroundTint="@color/gray_color"/>
+
+            <TextView
+                android:id="@+id/txtcheckindate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_button_selector"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="Checkin status"
+                android:textColor="@color/green_button_color"
+                android:textSize="@dimen/font_header" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txt_checkin_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".7"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="8dp"
+                    android:text="12 Nov, 2014 6.55 AM"
+                    android:textColor="@color/orange_bg"
+                    android:textSize="@dimen/font_v_small"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtcheckinhistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".3"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="right"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="8dp"
+                    android:text="History"
+                    android:textColor="@color/gray_color"
+                    android:textSize="@dimen/font_n_small"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ticketframelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/text_button_selector"
+                android:padding="8dp"
+                android:visibility="visible" >
+
+                <com.globalnest.autoresizetextview.AutoResizeTextView
+                    android:id="@+id/txtTicketName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:text="Ticket/Item"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_title" />
+
+                <TextView
+                    android:id="@+id/txtTicketQty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Qty"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_title" />
+
+                <TextView
+                    android:id="@+id/txtTicketPrice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight=".8"
+                    android:gravity="center|right"
+                    android:text="Amt"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ticket_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp" >
+
+                    <TextView
+                        android:id="@+id/attTicketName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight=".5"
+                        android:paddingRight="5dp"
+                        android:singleLine="false"
+                        android:text=""
+                        android:textColor="@color/gray_color"
+                        android:textSize="@dimen/font_small" />
+
+                    <FrameLayout
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@color/header_stroke" >
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/attTicketQty"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/gray_color"
+                        android:textSize="@dimen/font_small" />
+
+                    <FrameLayout
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@color/header_stroke" >
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/attTicketPrice"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight=".8"
+                        android:gravity="center|right"
+                        android:text="$000.00"
+                        android:textColor="@color/gray_color"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orderframelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/text_button_selector"
+                android:padding="8dp"
+                android:visibility="visible"
+                android:weightSum="4">
+
+                <com.globalnest.autoresizetextview.AutoResizeTextView
+                    android:id="@+id/txt_order_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Order Id"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_title" />
+
+                <com.globalnest.autoresizetextview.AutoResizeTextView
+                    android:id="@+id/txt_order_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Type"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_title" />
+
+                <com.globalnest.autoresizetextview.AutoResizeTextView
+                    android:id="@+id/txt_status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Status"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_title" />
+                <com.globalnest.autoresizetextview.AutoResizeTextView
+                    android:id="@+id/txt_amount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Amount"
+                    android:textColor="@color/green_button_color"
+                    android:textSize="@dimen/font_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orderframelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:visibility="visible" >
+
+                <com.globalnest.autoresizetextview.AutoResizeTextView
+                    android:id="@+id/txt_order_name_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center_vertical"
+                    android:text="Order id"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_text_color"
+                    android:textSize="@dimen/font_n_small" />
+
+                <FrameLayout
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@color/header_stroke" >
+                </FrameLayout>
+                <ListView
+                    android:id="@+id/payment_modeslist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:listSelector="@android:color/transparent"
+                    android:layout_weight="0.5">
+
+                </ListView>
+                <!--
+                                <TextView
+                                    android:id="@+id/txt_order_type_value"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Type"
+                                    android:textColor="@color/gray_color"
+                                    android:textSize="@dimen/font_v_small" />
+                -->
+
+                <!--  <FrameLayout
+                      android:layout_width="1dp"
+                      android:layout_height="35dp"
+                      android:layout_gravity="right|center_vertical"
+                      android:background="@color/header_stroke" >
+                  </FrameLayout>
+
+                  <TextView
+                      android:id="@+id/attTicketStatus"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="right"
+                      android:layout_marginRight="10dp"
+                      android:layout_weight=".9"
+                      android:gravity="center"
+                      android:text="status"
+                      android:textColor="@color/gray_color"
+                      android:textSize="@dimen/font_v_small" />-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_att_note"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/light_gray"
+                android:drawableRight="@drawable/edit_icon"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="Edit Check Number"
+                android:textColor="@color/green_button_color"
+                android:textSize="@dimen/font_normal"
+                android:visibility="gone" />
+            <com.globalnest.patternedEditText.FloatingHintEditTextLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                app:floatingHintTextAppearance="@style/FloatLabel.Label"
+                android:layout_margin="10dp">
+                <EditText
+                    android:id="@+id/edt_attreg_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/intractive_edit_text"
+                    android:gravity="top|left"
+                    android:hint="Note"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:maxLength="256"
+                    android:maxLines="6"
+                    android:minLines="5"
+                    android:padding="10dp" />
+            </com.globalnest.patternedEditText.FloatingHintEditTextLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/frame_transparentbadge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha=".2"
+        android:background="#000000"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <FrameLayout
+            android:id="@+id/frame_attdetailqrcodebadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:visibility="visible" >
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

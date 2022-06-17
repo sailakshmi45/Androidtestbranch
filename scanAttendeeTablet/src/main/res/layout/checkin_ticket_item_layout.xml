@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_layout"
+    android:orientation="horizontal" >
+    <View
+        android:id="@+id/statusbar"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="3dp"
+        android:background="@color/gray_color"
+        android:visibility="gone"/>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="false"
+        android:padding="5dp" >
+        <!-- <CheckBox
+             android:id="@+id/check_select"
+             android:layout_width="32dp"
+             android:layout_height="32dp"
+             android:layout_gravity="left|center"
+             android:gravity="center"
+             android:layout_marginRight="5dp"
+             android:padding="5dp"
+             android:button="@drawable/check_box_buyer_level"
+              />-->
+
+
+        <ImageView
+            android:id="@+id/check_unselect"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginRight="7dp"
+            android:padding="5dp"
+            android:src="@drawable/uncheck_new"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="false"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/ticketname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="45dp"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:text="Attendee"
+                android:textColor="@color/black_faded"
+                android:textSize="@dimen/font_normal"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/ticketnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="45dp"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:text="TKT-123"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/font_v_small"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <!-- <ImageView
+             android:id="@+id/imgticketcheckin"
+             android:layout_width="45dp"
+             android:layout_height="45dp"
+             android:layout_gravity="right|center_vertical"
+             android:layout_marginRight="3dp"
+             android:padding="10dp"
+             android:src="@drawable/yes"
+             android:visibility="visible" />-->
+
+        <CheckBox
+            android:id="@+id/check_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:button="@drawable/checkbox_square"
+            android:layout_marginRight="100dp"
+            android:padding="5dp"
+            android:focusable="false"
+            />
+        <!-- android:button="@drawable/checkbox_circle"-->
+
+        <ImageView
+            android:id="@+id/img_print_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="40dp"
+            android:gravity="right"
+            android:background="@drawable/print"
+            android:visibility="gone"/>
+        <CheckBox
+            android:id="@+id/check_print"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:button="@drawable/checkbox_square"
+            android:padding="5dp"
+            android:focusable="false"
+            />
+        <TextView
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textSize="10dp"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:drawableTop="@drawable/edit_icon"
+            android:padding="2dp"
+            android:visibility="gone"
+            android:focusable="false"
+            />
+    </FrameLayout>
+    <!--<Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:textOn="Print"
+        android:defaultFocusHighlightEnabled="true"
+        android:textOff="Checkin">
+
+    </Switch>-->
+</LinearLayout>

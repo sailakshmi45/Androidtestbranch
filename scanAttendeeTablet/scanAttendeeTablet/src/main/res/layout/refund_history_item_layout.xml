@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_border"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/refundamt"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/green_price_bg"
+            android:focusable="false"
+            android:text="$24.10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:background="@color/header_stroke" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+             android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/refundpersonName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center_vertical"
+                android:text="Ajay Goyal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_title" />
+
+            <TextView
+                android:id="@+id/refundticketname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center_vertical"
+                android:text="Full COnference"
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_title" />
+
+            <TextView
+                android:id="@+id/refundorderid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginTop="2dp"
+                android:text="Order Id: C-339857"
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/refundticketid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center_vertical"
+                 android:layout_marginTop="2dp"
+                android:text="Ticket Id: T-243434"
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/refunddate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center_vertical"
+                 android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="August 22, 2014 6.55 AM"
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/refundline"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:background="@color/event_date_green_bg1" />
+
+</LinearLayout>

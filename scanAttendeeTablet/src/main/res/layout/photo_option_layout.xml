@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/slidertxtcamera"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="TAKE IMAGE FROM CAMERA"
+         android:background="@drawable/text_view_selector"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_header" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:background="#CED7DE" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/slidertxtgallery"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="CHOOSE FROM GALLERY"
+         android:background="@drawable/text_view_selector"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_header" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:background="#CED7DE" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/slidercancel"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/text_view_selector"
+        android:gravity="center"
+        android:text="CANCEL"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_header" />
+
+</LinearLayout>

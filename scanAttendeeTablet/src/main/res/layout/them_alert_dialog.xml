@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="-10dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/close_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/cross"
+            android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/lay_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_alert"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/alert" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/light_blue" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:background="@color/green_button_color" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="Alert"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_vertical"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Server is not responding."
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/radiogroup">
+                <RadioButton
+                    android:id="@+id/radiobutton_print"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Printing Badges"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="14dp"
+                    android:layout_gravity="left|center"
+                    android:buttonTint="#4d4d4d"
+                    android:visibility="gone"/>
+                <LinearLayout
+                    android:id="@+id/child_printcheckboxs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="50dp"
+                    android:visibility="gone">
+                    <CheckBox
+                        android:id="@+id/checkbox_reprint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Allow Re-Print of Badges"
+                        android:textSize="12dp"
+                        android:buttonTint="#4d4d4d"
+                        android:layout_gravity="left|center"
+                        android:visibility="visible"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox_autocheckin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto Checkin"
+                        android:textSize="12dp"
+                        android:buttonTint="#4d4d4d"
+                        android:layout_gravity="left|center"
+                        android:visibility="visible"/>
+                    <CheckBox
+                        android:id="@+id/checkbox_allowscanning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Allow Scan to Print"
+                        android:textSize="12dp"
+                        android:buttonTint="#4d4d4d"
+                        android:layout_marginBottom="6dp"
+                        android:layout_gravity="left|center"
+                        android:visibility="visible"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radiobutton_notprint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Printing Badges"
+                    android:buttonTint="#4d4d4d"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_gravity="left|center"
+                    android:checked="true"
+                    android:visibility="gone"/>
+            </RadioGroup>
+            <CheckBox
+                android:id="@+id/checkbox_onlyscan_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allow Scan to Checkin"
+                android:textSize="12dp"
+                android:buttonTint="#4d4d4d"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="left|center"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/checkbox_addquest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allow add new attendees"
+                android:buttonTint="#4d4d4d"
+                android:textSize="14dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="left|center"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/checkbox_free_tickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allow Free Registrations"
+                android:textSize="12dp"
+                android:buttonTint="#4d4d4d"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="left|center"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/checkbox_paid_tickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allow Paid Registrations"
+                android:textSize="12dp"
+                android:buttonTint="#4d4d4d"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="left|center"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/checkbox_editable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allow edit attendee"
+                android:buttonTint="#4d4d4d"
+                android:textSize="14dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="left|center"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/checkbox_allow_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allow Checkin"
+                android:textSize="14dp"
+                android:buttonTint="#4d4d4d"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="6dp"
+                android:layout_gravity="left|center"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/checkbox_search_validation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search Validation"
+                android:textSize="14dp"
+                android:buttonTint="#4d4d4d"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="6dp"
+                android:layout_gravity="left|center"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:id="@+id/child_searchcheckboxs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/fname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="50dp"
+                        android:buttonTint="#4d4d4d"
+                        android:text="First Name"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        android:visibility="visible" />
+
+                    <CheckBox
+                        android:id="@+id/lname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:buttonTint="#4d4d4d"
+                        android:text="Last Name"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        android:visibility="visible" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/emailid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="50dp"
+                        android:buttonTint="#4d4d4d"
+                        android:text="Email Id"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        android:visibility="visible" />
+
+                    <CheckBox
+                        android:id="@+id/company"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:buttonTint="#4d4d4d"
+                        android:text="Company"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        android:visibility="visible" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <CheckBox
+                        android:id="@+id/order_id"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="50dp"
+                        android:buttonTint="#4d4d4d"
+                        android:text="Order ID"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        android:visibility="visible" />
+
+                    <CheckBox
+                        android:id="@+id/ticketno"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:buttonTint="#4d4d4d"
+                        android:text="Ticket No."
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_selfcheckinmsg"
+                android:layout_margin="6dp"
+                android:layout_gravity="center"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:id="@+id/lin_password"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:background="@drawable/shadow_border"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp">
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Password"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:background="@color/light_gray"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-5dp"
+                android:background="@color/green_flat_color"
+                android:src="@drawable/arrow_bottom_white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="-5dp"
+            android:background="@color/green_flat_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="5dp"
+                    android:background="@color/green_flat_color"
+                    android:text="CANCEL"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/green_flat_color" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right|center"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/btnOK"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right|center"
+                    android:layout_margin="5dp"
+                    android:background="@color/green_flat_color"
+                    android:gravity="center|center_horizontal"
+                    android:text="OK"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

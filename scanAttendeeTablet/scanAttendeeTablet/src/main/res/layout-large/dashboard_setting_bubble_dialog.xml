@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/lay_paymentSetting"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="2dp" >
+                <ImageView
+                    android:id="@+id/img_paySetting"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/button4"
+                    android:layout_below="@+id/button4"
+                    android:src="@drawable/paysettings" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pay Settings"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_badgeTemp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="2dp" >
+
+                <ImageView
+                    android:id="@+id/img_badge_temp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/button4"
+                    android:layout_below="@+id/button4"
+
+                    android:src="@drawable/badge_temp"
+                    android:text="New Button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Badge Template"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_scanTickets"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <ImageView
+                    android:id="@+id/img_scanTickets"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/button4"
+                    android:layout_below="@+id/button4"
+                    android:src="@drawable/tkt_scan"
+                    android:text="New Button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sessions"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_salesTax"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_paymentSetting"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <ImageView
+                    android:id="@+id/img_salesTax"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/button4"
+                    android:layout_below="@+id/button4"
+                    android:src="@drawable/salestax_icon"
+                    android:text="New Button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_gallery"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sales Tax"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_exterSettings"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lay_scanTickets"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <ImageView
+                    android:id="@+id/img_exterSettings"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/button4"
+                    android:layout_below="@+id/button4"
+                    android:src="@drawable/external_settings"
+                    android:text="New Button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_exterSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="External Settings"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_profile"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_badgeTemp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignStart="@+id/button4"
+                    android:src="@drawable/profile_icon"
+                    android:text="New Button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lay_cancle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:background="@drawable/circle_shape"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@+id/button4"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/white_cross"
+                    android:text="New Button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/white"
+
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

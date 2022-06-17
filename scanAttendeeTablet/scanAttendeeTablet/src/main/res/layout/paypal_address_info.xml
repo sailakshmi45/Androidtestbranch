@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+             >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_border"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/light_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/light_gray"
+                        android:text="ADDRESS INFORMATION (REQUIRED)"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/green_color"
+                        android:textStyle="bold" />
+                    
+                    <Button android:id="@+id/paypal_dialog_close"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/no"/>
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/edt_form_street"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:drawableLeft="@drawable/address_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="Street"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edt_form_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:drawableLeft="@drawable/city_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="City"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edt_form_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:drawableLeft="@drawable/state_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="State"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edt_form_zip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/intractive_edit_text"
+                    android:drawableLeft="@drawable/zip_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="Zipcode"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="textCapSentences" />
+
+                <Button
+                    android:id="@+id/btn_pay_pal"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_selector"
+                    android:text="@string/placeorder"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_title" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

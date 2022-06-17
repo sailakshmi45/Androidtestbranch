@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_bg_color" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/dropbox_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <EditText
+            android:id="@+id/edit_dropbox_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:imeOptions="flagNoExtractUi"
+            android:padding="12dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/dropbox_email"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/country"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <EditText
+            android:id="@+id/edit_dropbox_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/txt_ttlbytes"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/ttlbytes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <EditText
+            android:id="@+id/edit_dropbox_byte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/txt_ttlconbytes"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/ttlconbytes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <EditText
+            android:id="@+id/edit_dropbox_cbyte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_stroke" />
+
+        <TextView
+            android:id="@+id/btn_deleteacc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/text_button_selector"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/deleteacc"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_header" />
+    </LinearLayout>
+
+</ScrollView>

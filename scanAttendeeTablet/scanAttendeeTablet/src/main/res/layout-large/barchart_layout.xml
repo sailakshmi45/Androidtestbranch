@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/noTicketLay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/dashboradrevenu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oops! No Ticket Found"
+            android:textSize="16dp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_ticmoreinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="8dp"
+        android:background="@drawable/shadow_border"
+        android:drawableRight="@drawable/more"
+        android:gravity="right|center_horizontal"
+        android:padding="10dp"
+        android:text="" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddd"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/a1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="#53933f"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/a2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/a1"
+            android:gravity="center_horizontal"
+            android:text="Ticket"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/a3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/a2"
+            android:background="#FF9A39"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/a4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/a3"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_ticketView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <ListView
+        android:id="@+id/list_expand"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" >
+    </ListView>
+
+</LinearLayout>

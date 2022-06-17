@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@drawable/shadow_border"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/line_color"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/line_color"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:id="@+id/img_grid"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="left"
+                            android:src="@drawable/dash_order" />
+
+
+                        <TextView
+                            android:id="@+id/txt_gridName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="TOTAL ORDERS"
+                            android:typeface="sans"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+                    <com.globalnest.autoresizetextview.AutoResizeTextView
+                        android:id="@+id/txt_ttlOrders"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:text="0"
+                        android:singleLine="true"
+                        android:textColor="@color/event_date_blue_bg"
+                        android:textSize="40dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:id="@+id/img_grid"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/dash_attendees" />
+                        <TextView
+                            android:id="@+id/txt_gridName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="TOTAL ATTENDEES"
+                            android:typeface="sans"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+                    <com.globalnest.autoresizetextview.AutoResizeTextView
+                        android:id="@+id/txt_ttlAttendees"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/event_date_blue_bg"
+                        android:textSize="40dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/totalrevenue_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+                    <ImageView
+                        android:id="@+id/img_grid"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/dash_revenue" />
+
+                        <TextView
+                            android:id="@+id/txt_gridName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="REVENUE GENERATED"
+                            android:typeface="sans"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+                    <com.globalnest.autoresizetextview.AutoResizeTextView
+                        android:id="@+id/total_revGenerated"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:text="$0.00"
+                        android:singleLine="true"
+                        android:textColor="@color/event_date_blue_bg"
+                        android:textSize="40dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/line_color"
+                android:orientation="horizontal" >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_weight="1" android:padding="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+                    <ImageView
+                        android:id="@+id/img_grid"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/onsite_orders" />
+
+                        <TextView
+                            android:id="@+id/txt_gridName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="ONSITE ORDERS"
+                            android:textSize="16dp"
+                            android:typeface="sans"/>
+
+                    </LinearLayout>
+                    <com.globalnest.autoresizetextview.AutoResizeTextView
+                        android:id="@+id/onsite_totalorders"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:text="0"
+                        android:singleLine="true"
+                        android:textColor="@color/event_date_blue_bg"
+                        android:textSize="40dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1" android:padding="5dp"
+                    android:orientation="vertical"
+                    android:background="@color/white" >
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+                    <ImageView
+                        android:id="@+id/img_grid"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/onsite_attendees" />
+
+
+                        <TextView
+                            android:id="@+id/txt_gridName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="ONSITE ATTENDEES"
+                            android:typeface="sans"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+                    <com.globalnest.autoresizetextview.AutoResizeTextView
+                        android:id="@+id/onsite_totalAttendees"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:text="0"
+                        android:singleLine="true"
+                        android:textColor="@color/event_date_blue_bg"
+                        android:textSize="40dp"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/onsiterevenue_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1" android:padding="5dp"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    >
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+                    <ImageView
+                        android:id="@+id/img_grid"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/onsite_revenue" />
+
+                        <TextView
+                            android:id="@+id/txt_gridName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="ONSITE REVENUE"
+                            android:typeface="sans"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+                    <com.globalnest.autoresizetextview.AutoResizeTextView
+                        android:id="@+id/onsite_revenue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:singleLine="true"
+                        android:text="$0.00"
+                        android:textColor="@color/event_date_blue_bg"
+                        android:textSize="40dp"
+                        />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1" android:padding="5dp"
+                    android:visibility="gone"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/txt_gridName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Checkins/\nCheckout"
+
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/txt_ttlCheckin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2.80"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="3dp"
+                            android:text="0"
+                            android:textColor="@color/check_color"
+                            android:textSize="25dp"
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_grid"
+                            android:layout_width="50dp"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight=".4"
+                            android:src="@drawable/dashboardcheckin" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

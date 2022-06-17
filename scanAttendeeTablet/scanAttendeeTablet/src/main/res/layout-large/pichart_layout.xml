@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/nopaymentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/chart_pie" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oops! No Sale Found" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/paymentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="140dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <com.github.mikephil.charting.charts.PieChart
+               android:id="@+id/pieChart"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/paymentpielayout_notfound"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/chart_pie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oops! No Sale Found" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ListView
+                android:id="@+id/paymentview"
+                android:layout_width="140dp"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:visibility="visible" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="0dp"
+        android:background="@color/darl_gray_text_color"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/txttotalsales"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|bottom|center_vertical"
+            android:gravity="right"
+            android:text="Total Sales: $00.00000"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_title"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

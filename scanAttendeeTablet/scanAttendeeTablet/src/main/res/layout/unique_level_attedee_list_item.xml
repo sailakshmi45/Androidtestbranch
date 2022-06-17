@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow_border"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="2" >
+        <View
+            android:id="@+id/statusbar"
+            android:layout_width="3dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="3dp"
+            android:background="@color/gray_color"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <TextView
+                android:id="@+id/attendee_buyer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Attendee Name" />
+
+            <com.globalnest.autoresizetextview.AutoResizeTextView
+                android:id="@+id/attendee_ticket_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textSize="13dp"
+                android:textColor="@color/light_blue"
+                android:text="TKT-124567" />
+            <com.globalnest.autoresizetextview.AutoResizeTextView
+                android:id="@+id/attendee_ticket_parentname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textSize="13dp"
+                android:textColor="@color/light_blue"
+                android:text="TKT-124567"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/attendee_order_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:text="ORDER ID" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/attendee_checkin_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:button="@drawable/check_box_buyer_level"
+            android:padding="25dp" />
+    </LinearLayout>
+
+</LinearLayout>

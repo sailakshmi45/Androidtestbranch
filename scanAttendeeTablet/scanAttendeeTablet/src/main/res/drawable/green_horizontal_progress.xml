@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle" >
+            <corners
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp" />
+
+    <solid android:color="@color/white" />
+
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+
+    <size
+        android:height="100dp"
+        android:width="100dp" />
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/textcolor" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape android:shape="rectangle" >
+            <corners
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp" />
+
+    <solid android:color="@color/white" />
+
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+
+    <size
+        android:height="100dp"
+        android:width="100dp" />
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/textcolor" />
+        </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+           <shape android:shape="rectangle" >
+            <corners
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp" />
+
+    <solid android:color="@color/light_green" />
+
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+
+    <size
+        android:height="100dp"
+        android:width="100dp" />
+
+    <stroke
+        android:width="10dp"
+        android:color="@android:color/transparent" />
+        </shape>
+        </clip>
+    </item>
+
+</layer-list>

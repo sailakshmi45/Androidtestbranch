@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/intractive_edit_text"
+     >
+
+    <EditText
+        android:id="@+id/atttag"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Tag"
+        android:inputType="textCapWords"
+        android:padding="8dp"
+        android:background="#3B0B0B"
+        android:layout_weight=".5"
+        android:textColor="@color/white"
+        android:textSize="17dp" />
+
+    <ImageView
+        android:id="@+id/img_clear"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:background="#3B0B0B"
+        android:layout_weight=".2"
+        android:src="@drawable/delete"
+        />
+
+</LinearLayout>

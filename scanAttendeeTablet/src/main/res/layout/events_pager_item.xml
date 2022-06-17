@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:paddingLeft="40dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/txt_noevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There are no live events going on right now."
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:typeface="serif"
+            android:visibility="gone"/>
+
+        <com.globalnest.utils.PullToRefreshListView
+            android:id="@+id/list_events"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:scrollbars="none"
+            >
+        </com.globalnest.utils.PullToRefreshListView>
+    </FrameLayout>
+    <!-- <ListView
+     android:id="@+id/list_events"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:divider="@null"
+     android:listSelector="@android:color/transparent"
+     android:cacheColorHint="@android:color/transparent"
+     android:dividerHeight="1dp"
+     android:scrollbars="none" >
+ </ListView>  -->
+
+</LinearLayout>

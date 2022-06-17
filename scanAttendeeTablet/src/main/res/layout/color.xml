@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="holo_green_dark">#ff669900</color>
+    <color name="grey_text">#808080</color>
+    <color name="darknewgray">#333333</color>
+    <color name="transparent">#00000000</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c07FFF00</color>
+    <color name="result_image_border">#ff526F35</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c07FFF00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_frame">#ff526F35</color>
+    <color name="viewfinder_laser">#ff7FFF00</color>
+    <color name="transparent_blue">#80004488</color>
+    <color name="tabMedium">#2B2B2B</color>
+    <color name="tabDark">#000000</color>
+    <color name="orange">#C1854F</color>
+    <color name="tabTransparent">#10ffffff</color>
+    <color name="eventwhite">#ffffff</color>
+    <color name="viewfinder_mask">#607CFC00</color>
+    <color name="txtclick">#0F1001</color>
+    <color name="txtnormal">#1619BF</color>
+    <color name="red">#dfedff</color>
+    <color name="sliderbg">#257fb0</color>
+    <color name="eventnamebg">#5ccccc</color>
+    <color name="redmatch">#F05B5B</color>
+    <color name="bgcolor">#ECECEC</color>
+    <color name="eventdetail">#ffffcc</color>
+    <color name="seperator">#C1C1C1</color>
+    <color name="bluecolor">#0A6FA6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="skyblue">#3BB9FF</color>
+    <color name="lightgray">#F9F9F9</color>
+    <color name="lightblue">#3A94DB</color>
+    <color name="greenregister">#7EB989</color>
+    <color name="popup_gray">#CFCFCF</color>
+    
+    <color name="hash_green">#9fc98a</color>
+    <color name="hash_bg">#d3d6db</color>
+    <color name="hash_new_green">#60d90f</color>
+    <color name="hash_red">#fbcb26</color>
+    <color name="hash_hash">#999999</color>
+    <color name="hash_light_green">#C7E7B6</color>
+</resources>

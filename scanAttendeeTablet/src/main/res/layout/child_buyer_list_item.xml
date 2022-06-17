@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/front_child"
+        android:background="@drawable/shadow_border"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:tag="front"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/line_effect"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_vertical"
+                android:gravity="center_vertical"
+                android:background="@color/gray_selector_color"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/attendeelayout_child"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center"
+                    android:layout_toLeftOf="@+id/checkinlayout"
+                    android:gravity="center_vertical"
+                    
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/txtattname_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:text="John Parker"
+                        
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:id="@+id/txtattcomp_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:text="Google Inc."
+                        android:textStyle="italic"
+                        android:textColor="@color/gray_color"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkinlayout_child"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <!--
+                         <FrameLayout
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="8dp"
+                        android:background="@color/header_stroke" />
+                    -->
+
+                    <Button
+                        android:id="@+id/btncheckin_child"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/red_price_bg"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:text="0/1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_title" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

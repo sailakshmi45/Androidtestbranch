@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent_shadow_border"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <LinearLayout android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="50dp">
+
+                        <TextView
+                            android:id="@+id/txtticketname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:text="Ticket Name"
+                            android:textColor="@color/black_faded"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/packege_line_items"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/txtticketname"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:paddingLeft="4dp"
+                            android:text=""
+                            android:textColor="@color/darl_gray_text_color"
+                            android:textSize="11dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/lay_isPackage"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/tag"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/txt_isPackage"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:gravity="center"
+                            android:text="Package"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:textStyle="bold|italic"
+                            android:typeface="sans"
+                            android:visibility="visible" />
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/image_border"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/ticketimage"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="top|left|center"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/default_image" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="5.0dip"
+                        android:orientation="vertical" >
+
+                        <FrameLayout
+                            android:id="@+id/frm_avai"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3.0dip"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txt_avi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="0dip"
+                                android:gravity="center_vertical"
+                                android:text="Available:"
+                                android:textColor="@color/black_faded"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtticketavail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="0dip"
+                                android:gravity="center_vertical"
+                                android:text="900/1000"
+                                android:textColor="@color/blue_text_color"
+                                android:textSize="14dp" />
+
+
+
+                        </FrameLayout>
+
+                        <!--  <FrameLayout
+                              android:id="@+id/pricelayout"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="bottom"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginTop="5.0dip"
+                              android:orientation="horizontal" >-->
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout01"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5.0dip"
+                            android:visibility="visible" >
+
+                            <TextView
+                                android:id="@+id/txtcurrency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="Rs:"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txtticketprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5.0dip"
+                                android:digits="1234567890."
+                                android:gravity="center_vertical"
+                                android:inputType="number"
+                                android:paddingLeft="0dip"
+                                android:text="10.00"
+                                android:textColor="@color/green_text_color_selector"
+                                android:textSize="14dp"
+                                android:layout_weight="1"/>
+
+                            <TextView
+                                android:id="@+id/txtqty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:gravity="center_vertical"
+                                android:text="Qty:"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_small"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|end"
+                                android:gravity="right">
+                                <FrameLayout
+                                    android:id="@+id/fram_soldout"
+                                    android:layout_width="56dp"
+                                    android:layout_height="28dp"
+                                    android:layout_marginLeft="34dp"
+                                    android:layout_marginRight="30dp"
+                                    android:orientation="vertical"
+                                    android:visibility="gone"
+                                    android:background="@drawable/soldout_ticket"
+                                    >
+
+                                </FrameLayout>
+                                <LinearLayout
+                                    android:id="@+id/lay_buttons"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible">
+                                    <TextView
+                                        android:id="@+id/txt_closed"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical|right"
+                                        android:layout_marginRight="15.0dip"
+                                        android:gravity="center"
+                                        android:text="CLOSED"
+                                        android:textColor="@color/white"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold"
+                                        android:background="@color/red"
+                                        android:padding="5dp"
+                                        android:visibility="gone"
+                                        />
+                                    <Button
+                                        android:id="@+id/btnminusqty"
+                                        android:layout_width="35dp"
+                                        android:layout_height="25dp"
+                                        android:layout_gravity="right|center_vertical"
+                                        android:background="@drawable/minus_button_selector"
+                                        android:focusable="false"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/orange_bg"
+                                        android:textSize="18dp"
+                                        android:textStyle="bold"
+                                        android:typeface="sans"
+                                        />
+
+                                    <TextView
+                                        android:id="@id/txteqty"
+                                        android:layout_width="40.0dip"
+                                        android:layout_height="25.0dip"
+                                        android:layout_gravity="center_vertical|right"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textColor="@color/blue_text_color"
+                                        android:textSize="16dp"
+                                        />
+
+                                    <Button
+                                        android:id="@+id/btnaddqty"
+                                        android:layout_width="35dp"
+                                        android:layout_height="25dp"
+                                        android:layout_gravity="right|center_vertical"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@drawable/plus_button_selector"
+                                        android:focusable="false"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/green_button_color"
+                                        android:textSize="18dp"
+                                        android:textStyle="bold"
+                                        android:typeface="serif"
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <!--
+                                                </FrameLayout>
+                        -->
+                    </FrameLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:alpha=".8"
+                    android:background="@color/screen_bg_color" >
+                </FrameLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/ticket_type"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center"
+            android:layout_weight="1.0"
+            android:gravity="left|center_vertical"
+            android:layout_marginLeft="7dp"
+            android:text="Donation"
+            android:textColor="@color/screen_bg_color"
+            android:textSize="@dimen/font_title" />
+
+        <LinearLayout
+            android:id="@+id/layout_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center|right"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:background="@color/b1_transparent" />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/delete" />
+
+            <Button
+                android:id="@id/txtticketremove"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:paddingLeft="8dp"
+                android:text="Remove"
+                android:textColor="@color/green_button_color"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/lay_ticketedit"
+        android:layout_width="100dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingRight="3dp"
+        android:weightSum="3" >
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="15dp"
+            android:background="@color/b1_transparent" />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/edit_small" />
+
+        <Button
+            android:id="@+id/txtticketedit"
+            android:layout_width="43dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:paddingLeft="8dp"
+            android:text="Edit"
+            android:textColor="@color/green_button_color"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="-3dp"
+        android:background="@drawable/repete_image_bg"
+        android:gravity="center"
+        android:scaleType="matrix"
+        android:textSize="@dimen/font_title" />
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cart_popup_border" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtticketcart"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="Ticket 2"
+                android:textColor="@color/darl_gray_text_color"
+                android:textSize="@dimen/font_title"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/ticketview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@color/white" >
+            </ListView>
+
+            <TextView
+                android:id="@+id/txtitemcart"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="Item 1"
+                android:textColor="@color/darl_gray_text_color"
+                android:textSize="@dimen/font_title"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/itemview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@color/white" >
+            </ListView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnplaceorder"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dp"
+       
+            android:background="@drawable/signup_button_list_selector"
+            android:text="@string/placeorder"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_header" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/nocartfound"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="YOUR CART IS EMPTY"
+        android:textColor="@color/darl_gray_text_color"
+        android:textSize="@dimen/font_header"
+        android:visibility="gone" />
+
+</FrameLayout>
